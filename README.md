@@ -1,4 +1,4 @@
-# Site internet — Le Kab (kinésithérapie, Chazay-d'Azergues)
+# Site internet — Le Kab Chazay (kiné sport & balnéo, Chazay-d'Azergues)
 
 Site statique (HTML / CSS / JavaScript, aucune installation requise).
 Ouvrir `index.html` dans un navigateur, ou héberger le dossier tel quel
@@ -26,14 +26,20 @@ Sur toutes les pages : logo / nom, menu, bouton « Prendre rendez-vous » dans l
 4. **`contact.html`** : accessibilité PMR à préciser.
 5. **`assets/js/cabinet-data.js`** : textes des salles et du matériel (planning balnéo, location Game Ready…).
 
-## Remplacer les illustrations par de vraies photos / vidéos
+## Photos
 
-- **Salles** : dans `assets/js/cabinet.js`, chaque salle est dessinée par `SCENES.<id>()`. Pour une photo,
-  remplacer le retour de la fonction par `'<img src="assets/img/salles/accueil.jpg" alt="">'` et ajuster
-  les positions `x` / `y` (en %) des points d'intérêt dans `cabinet-data.js`.
-- **Survol aérien** : une vidéo drone peut remplacer `SCENES.aerial()` ; la porte animée reste au-dessus.
-- **Matériel** : même principe avec `DRAW.<id>` ; les points `spots` sont en % de l'image.
-- **Équipe** : champs `photo` ou `video` de chaque membre (une vidéo courte en boucle fonctionne très bien).
+- `assets/img/cabinet/` : façade, accueil, soins, couloir, balnéo, plateau. Ce sont des **visuels non
+  contractuels** (projection d'aménagement) : la mention est affichée sur le site. Remplacez-les par les
+  vraies photos en gardant le même nom de fichier et un format 16:9 ; si le cadrage change, ajustez les
+  positions `x` / `y` (en %) des points d'intérêt dans `assets/js/cabinet-data.js`.
+- `assets/img/materiel/` : Voltra et EMG (photos produit), et des recadrages du plateau pour les autres machines.
+  Vérifiez que vous avez le droit d'utiliser les photos produit des fabricants (ou utilisez vos propres photos).
+- Mad-Up BFR, plyo box, reverse hyper et Normatec n'ont pas encore de photo : ils utilisent une illustration
+  (ajouter `photo: IMG + "fichier.jpg"` dans `cabinet-data.js` suffit pour basculer sur une photo).
+- Survol aérien : c'est un plan dessiné d'après la disposition réelle (rue en courbe, parking, entrée).
+  Les captures Google Maps / Street View ne sont pas utilisées : elles ne peuvent pas être publiées sur un site.
+  Une vraie vidéo de drone pourra remplacer le dessin (`aerial()` dans `cabinet.js`).
+- Équipe : champs `photo` ou `video` de chaque membre dans `equipe.html`.
 
 ## Formulaire de demande de RDV
 

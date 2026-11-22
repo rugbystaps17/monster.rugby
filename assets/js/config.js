@@ -3,8 +3,8 @@
    Tout ce qui est marqué « À REMPLACER » est provisoire.
    ========================================================= */
 window.KAB = {
-  name: "Le Kab",
-  tagline: "Kinésithérapie & rééducation du sport",
+  name: "Le Kab Chazay",
+  tagline: "Kiné sport & balnéo",
 
   // À REMPLACER : numéro réel du cabinet
   phone: "04 00 00 00 00",

@@ -101,61 +101,22 @@
       '<rect x="22" y="76" width="10" height="4" rx="2" fill="' + A + '"/>'
   };
 
-  /* ---------- Fiches matériel ---------- */
+  /* ---------- Fiches matériel ----------
+     photo : image du matériel (sinon le dessin DRAW est utilisé)
+     spots : points d'intérêt sur la photo (ou le dessin), en % [x, y, titre, texte] */
+  var IMG = "assets/img/materiel/";
   var EQUIP = {
-    rower: {
-      name: "Rameur", sub: "Équipement cardio", room: "plateau",
-      text: "Échauffement global, rodage articulaire et travail cardio ou de pré-fatigue, sans impact.",
-      bullets: ["Mobilise jambes, tronc et bras dans un même geste", "Idéal en début de séance pour préparer les articulations", "Travail par intervalles pour le reconditionnement"],
-      spots: [[20, 52, "Volant d'inertie", "La résistance augmente avec l'intensité de la tirée."], [70, 62, "Siège coulissant", "Mouvement fluide, sans choc pour les articulations."]]
-    },
-    skierg: {
-      name: "SkiErg", sub: "Équipement cardio", room: "plateau",
-      text: "Cardio intense du haut du corps et gainage, possible même quand une jambe est blessée.",
-      bullets: ["Entretien cardio pendant une blessure du membre inférieur", "Renforcement des dorsaux, épaules et sangle abdominale", "Pré-fatigue avant un travail technique"],
-      spots: [[50, 16, "Volant à air", "Résistance naturelle : plus vous tirez fort, plus c'est dur."], [37, 60, "Poignées", "Mouvement de poussée alternée ou simultanée."]]
-    },
-    bike: {
-      name: "Bike", sub: "Équipement cardio", room: "plateau",
-      text: "Vélo à air pour l'échauffement, le rodage du genou après une opération et le travail cardio fractionné.",
-      bullets: ["Rodage articulaire en douceur (post-op genou/hanche)", "Séances de fractionné pour retrouver le souffle", "Travail bras + jambes combiné"],
-      spots: [[26, 61, "Ventilateur", "Résistance progressive et illimitée."], [72, 35, "Selle réglable", "Réglée selon l'amplitude autorisée de votre genou."]]
-    },
-    reverse: {
-      name: "Reverse hyper extension", sub: "Chaîne postérieure", room: "plateau",
-      text: "Renforce fessiers, ischio-jambiers et muscles lombaires tout en décomprimant la colonne.",
-      bullets: ["Rééducation et prévention des lombalgies", "Prévention des lésions des ischio-jambiers", "Renforcement de la chaîne postérieure du sportif"],
-      spots: [[45, 40, "Plateau d'appui", "Le buste reste immobile, le bas du corps travaille."], [88, 85, "Balancier", "Le mouvement de pendule décomprime le rachis lombaire."]]
-    },
-    rack: {
-      name: "Rack complet", sub: "Force & réathlétisation", room: "plateau",
-      text: "Rack entièrement équipé avec barre olympique et poids, pour le travail de force en toute sécurité.",
-      bullets: ["Squat, soulevé de terre, développé, fentes…", "Développement de la force maximale et de la puissance", "Dernière étape de la réathlétisation avant le retour au jeu"],
-      spots: [[50, 39, "Barre olympique", "Barre de 20 kg et disques pour une progression fine."], [80, 20, "Sécurités", "Crochets et barres de sécurité réglables."], [50, 79, "Banc", "Pour le développé et les exercices assis."]]
-    },
-    legext: {
-      name: "Leg extension", sub: "Quadriceps", room: "plateau",
-      text: "Travail isolé des quadriceps, avec un contrôle précis de l'amplitude et de la charge.",
-      bullets: ["Renforcement ciblé après ligamentoplastie (LCA)", "Lutte contre la fonte musculaire du quadriceps", "Amplitude limitée selon le protocole chirurgical"],
-      spots: [[18, 83, "Boudin", "Placé sur le bas de la jambe, il guide l'extension du genou."], [82, 55, "Pile de poids", "Charge ajustable de façon progressive."]]
-    },
-    legcurl: {
-      name: "Leg curl", sub: "Ischio-jambiers", room: "plateau",
-      text: "Travail des ischio-jambiers, essentiel pour la prévention et la rééducation des lésions musculaires.",
-      bullets: ["Rééducation après déchirure des ischio-jambiers", "Équilibre quadriceps / ischios après chirurgie du genou", "Travail excentrique de prévention"],
-      spots: [[12, 31, "Boudin", "Placé derrière la cheville pour fléchir le genou."], [46, 50, "Banc incliné", "Position allongée pour isoler les ischio-jambiers."]]
-    },
-    boxes: {
-      name: "Box jump & plyo box", sub: "Pliométrie", room: "plateau",
-      text: "Travail de pliométrie et de renforcement : sauts, réceptions, explosivité.",
-      bullets: ["Apprendre à bien réceptionner (genou, cheville)", "Développer l'explosivité et la réactivité", "Valider les critères de retour au sport"],
-      spots: [[18, 75, "30 cm", "Premières réceptions contrôlées."], [83, 50, "60 cm", "Sauts explosifs en fin de rééducation."]]
-    },
     voltra: {
-      name: "Voltra", sub: "Poulie à résistance électromagnétique", room: "plateau",
+      name: "Voltra", sub: "Poulie à résistance électromagnétique", room: "plateau", photo: IMG + "voltra.jpg",
       text: "Poulie à résistance électromagnétique pour un contrôle optimal de la charge, réglable très finement.",
-      bullets: ["Charge ajustée au plus près de vos capacités du jour", "Modes de résistance variés (excentrique, isométrique, élastique…)", "Suivi chiffré de la force et de la vitesse de chaque répétition"],
-      spots: [[38, 52, "Moteur électromagnétique", "Remplace les poids : la résistance est générée électroniquement."], [50, 36, "Écran", "Affiche la charge, la vitesse et la puissance."], [86, 78, "Câble & poignée", "Accessoires interchangeables pour tous les mouvements."]]
+      bullets: ["Charge ajustée au plus près de vos capacités du jour", "Modes de résistance variés (excentrique, isométrique, élastique…)", "Suivi chiffré de la force et de la vitesse de chaque répétition", "Compact : se fixe sur le rack, un mur ou une plateforme"],
+      spots: [[24, 45, "Écran de contrôle", "Choix de la charge et du mode de résistance en un geste."], [54, 45, "Moteur & poulie", "Le moteur électromagnétique remplace les disques de fonte."], [57, 79, "Mousqueton", "Poignées, barre, sangle de cheville : tous les accessoires s'y accrochent."], [91, 36, "Poignée", "Se déplace et se fixe facilement d'un poste à l'autre."]]
+    },
+    emg: {
+      name: "EMG", sub: "Électromyographie de surface", room: "plateau", photo: IMG + "emg.jpg",
+      text: "Capteurs qui mesurent l'activité électrique des muscles et permettent de déceler une inhibition musculaire arthrogénique (AMI).",
+      bullets: ["Visualiser en direct la contraction du muscle (biofeedback)", "Détecter l'AMI après une chirurgie ou un traumatisme du genou", "Objectiver la progression séance après séance"],
+      spots: [[67, 40, "Capteur sans fil", "Transmet le signal électrique du muscle à la tablette du kiné."], [61, 58, "Électrodes adhésives", "Collées sur la peau, juste au-dessus du muscle étudié."], [30, 55, "Muscle ciblé", "Ici le biceps ; au genou, on suit surtout le quadriceps."]]
     },
     madup: {
       name: "Mad-Up BFR", sub: "Blood Flow Restriction", room: "plateau",
@@ -164,90 +125,128 @@
       note: "L'utilisation du BFR est validée lors du bilan : certaines contre-indications existent.",
       spots: [[40, 36, "Brassard", "Gonflé à une pression calculée pour chaque patient."], [84, 70, "Boîtier", "Régule et contrôle la pression en continu."]]
     },
-    emg: {
-      name: "EMG", sub: "Électromyographie de surface", room: "plateau",
-      text: "Capteurs qui mesurent l'activité électrique des muscles et permettent de déceler une inhibition musculaire arthrogénique (AMI).",
-      bullets: ["Visualiser en direct la contraction du muscle (biofeedback)", "Détecter l'AMI après une chirurgie ou un traumatisme du genou", "Objectiver la progression séance après séance"],
-      spots: [[27, 31, "Capteurs", "Posés sur la peau, ils captent le signal électrique du muscle."], [76, 46, "Écran", "La courbe permet au patient de « réveiller » son muscle."]]
+    boxes: {
+      name: "Box jump & plyo box", sub: "Pliométrie", room: "plateau",
+      text: "Travail de pliométrie et de renforcement : sauts, réceptions, explosivité.",
+      bullets: ["Apprendre à bien réceptionner (genou, cheville)", "Développer l'explosivité et la réactivité", "Valider les critères de retour au sport"],
+      spots: [[18, 75, "30 cm", "Premières réceptions contrôlées."], [83, 50, "60 cm", "Sauts explosifs en fin de rééducation."]]
+    },
+    rack: {
+      name: "Rack complet", sub: "Force & réathlétisation", room: "plateau", photo: IMG + "rack.jpg",
+      text: "Rack entièrement équipé avec barre olympique et poids, pour le travail de force en toute sécurité.",
+      bullets: ["Squat, soulevé de terre, développé, fentes…", "Développement de la force maximale et de la puissance", "Dernière étape de la réathlétisation avant le retour au jeu"],
+      spots: [[48, 52, "Barre olympique", "Barre de 20 kg et disques pour une progression fine."], [58, 78, "Banc", "Pour le développé et les exercices assis."], [12, 40, "Espalier", "Étirements, gainage et exercices au poids du corps."]]
+    },
+    rower: {
+      name: "Rameur", sub: "Équipement cardio", room: "plateau", photo: IMG + "rameur.jpg",
+      text: "Échauffement global, rodage articulaire et travail cardio ou de pré-fatigue, sans impact.",
+      bullets: ["Mobilise jambes, tronc et bras dans un même geste", "Idéal en début de séance pour préparer les articulations", "Travail par intervalles pour le reconditionnement"],
+      spots: [[83, 45, "Volant à air", "La résistance augmente avec l'intensité de la tirée."], [45, 65, "Siège coulissant", "Mouvement fluide, sans choc pour les articulations."]]
+    },
+    skierg: {
+      name: "SkiErg", sub: "Équipement cardio", room: "plateau", photo: IMG + "skierg.jpg",
+      text: "Cardio intense du haut du corps et gainage, possible même quand une jambe est blessée.",
+      bullets: ["Entretien cardio pendant une blessure du membre inférieur", "Renforcement des dorsaux, épaules et sangle abdominale", "Pré-fatigue avant un travail technique"],
+      spots: [[40, 10, "Poignées", "Mouvement de traction vers le bas, alterné ou simultané."], [62, 80, "Volant à air", "Résistance naturelle : plus vous tirez fort, plus c'est dur."]]
+    },
+    bike: {
+      name: "Bike & espace cardio", sub: "Équipement cardio", room: "plateau", photo: IMG + "cardio.jpg",
+      text: "Vélos, tapis et espace cardio vitré pour l'échauffement, le rodage du genou après une opération et le fractionné.",
+      bullets: ["Rodage articulaire en douceur (post-op genou/hanche)", "Séances de fractionné pour retrouver le souffle", "Reprise progressive de la course sur tapis"],
+      spots: [[73, 45, "Vélos", "Selle réglée selon l'amplitude autorisée du genou."], [22, 45, "Tapis de course", "Reprise de la marche puis de la course, vitesse contrôlée."]]
+    },
+    reverse: {
+      name: "Reverse hyper extension", sub: "Chaîne postérieure", room: "plateau",
+      text: "Renforce fessiers, ischio-jambiers et muscles lombaires tout en décomprimant la colonne.",
+      bullets: ["Rééducation et prévention des lombalgies", "Prévention des lésions des ischio-jambiers", "Renforcement de la chaîne postérieure du sportif"],
+      spots: [[45, 40, "Plateau d'appui", "Le buste reste immobile, le bas du corps travaille."], [88, 85, "Balancier", "Le mouvement de pendule décomprime le rachis lombaire."]]
+    },
+    legext: {
+      name: "Leg extension", sub: "Quadriceps", room: "plateau", photo: IMG + "legext.jpg",
+      text: "Travail isolé des quadriceps, avec un contrôle précis de l'amplitude et de la charge.",
+      bullets: ["Renforcement ciblé après ligamentoplastie (LCA)", "Lutte contre la fonte musculaire du quadriceps", "Amplitude limitée selon le protocole chirurgical"],
+      spots: [[30, 64, "Boudin", "Placé sur le bas de la jambe, il guide l'extension du genou."], [12, 30, "Charge", "Ajustable de façon progressive."]]
+    },
+    legcurl: {
+      name: "Leg curl", sub: "Ischio-jambiers", room: "plateau", photo: IMG + "legext.jpg",
+      text: "Travail des ischio-jambiers, essentiel pour la prévention et la rééducation des lésions musculaires.",
+      bullets: ["Rééducation après déchirure des ischio-jambiers", "Équilibre quadriceps / ischios après chirurgie du genou", "Travail excentrique de prévention"],
+      spots: [[50, 40, "Assise réglable", "Position adaptée à la longueur de jambe de chaque patient."]]
     },
     gameready: {
-      name: "Game Ready", sub: "Cryothérapie & compression", room: "recup",
+      name: "Game Ready", sub: "Cryothérapie & compression", room: "recup", photo: IMG + "gameready.jpg",
       text: "Associe le froid et la compression pneumatique pour diminuer la douleur et l'œdème.",
       bullets: ["Indispensable après une chirurgie ou une entorse", "Réduit le gonflement et soulage la douleur", "Location possible en post-opératoire pour accélérer la récupération à domicile"],
       note: "Renseignez-vous au cabinet pour la location de la Game Ready.",
-      spots: [[24, 50, "Unité de contrôle", "Règle la température et le niveau de compression."], [80, 52, "Manchon", "Adapté à chaque articulation : genou, cheville, épaule…"]]
+      spots: [[58, 25, "Unité de contrôle", "Règle la température et le niveau de compression."], [45, 70, "Manchons", "Adaptés à chaque articulation : genou, cheville, épaule…"]]
     },
     normatec: {
       name: "Normatec", sub: "Pressothérapie", room: "recup",
       text: "Pressothérapie séquentielle qui améliore le retour veineux et accélère la récupération.",
       bullets: ["Meilleure récupération après l'effort", "Sensation de jambes légères", "Massage par compression progressive des pieds vers les cuisses"],
       spots: [[16, 75, "Boîtier", "Programme l'intensité et la durée de la séance."], [62, 50, "Bottes", "Plusieurs chambres se gonflent l'une après l'autre."]]
-    },
-    table: {
-      name: "Table de soin", sub: "Soins & récupération", room: "recup",
-      text: "Table électrique réglable en hauteur, pour les soins manuels et les séances de récupération.",
-      bullets: ["Confort et sécurité du patient", "Hauteur ajustée pour chaque technique"],
-      spots: [[50, 48, "Plateau réglable", "Montée et descente électriques."]]
     }
   };
 
-  /* ---------- Salles ---------- */
+  /* ---------- Salles (photos 16:9, points en %) ---------- */
+  var PH = "assets/img/cabinet/";
   var ROOMS = [
     {
-      id: "accueil", title: "L'accueil", kicker: "Première étape",
+      id: "accueil", title: "L'accueil", kicker: "Première étape", photo: PH + "accueil.jpg",
       intro: "Dès la porte poussée, l'équipe vous accueille et vous guide.",
       hotspots: [
-        { x: 50, y: 53, title: "Accueil & prise de rendez-vous", text: "Notre secrétariat vous accueille, planifie vos séances et répond à vos questions. Rendez-vous aussi possibles par téléphone ou sur Doctolib.", link: ["contact.html#rdv", "Prendre rendez-vous"] },
-        { x: 19, y: 34, title: "Les premiers pas", text: "Première séance ? Pensez à apporter votre ordonnance, votre carte Vitale, votre mutuelle, vos examens (radios, IRM, compte rendu opératoire) et une tenue confortable." },
-        { x: 85, y: 62, title: "Salle d'attente", text: "Un espace calme pour patienter quelques minutes avant votre séance." }
+        { x: 46, y: 62, title: "Accueil & prise de rendez-vous", text: "Notre secrétariat vous accueille, planifie vos séances et répond à vos questions. Rendez-vous aussi possibles par téléphone ou sur Doctolib.", link: ["contact.html#rdv", "Prendre rendez-vous"] },
+        { x: 65, y: 63, title: "Les premiers pas", text: "Première séance ? Pensez à apporter votre ordonnance, votre carte Vitale, votre mutuelle, vos examens (radios, IRM, compte rendu opératoire) et une tenue confortable." },
+        { x: 88, y: 68, title: "Salle d'attente", text: "Un espace lumineux pour patienter quelques minutes avant votre séance." },
+        { x: 11, y: 52, title: "Salles de soin", text: "Des salles individuelles, au calme, pour le bilan et les soins manuels." },
+        { x: 72, y: 45, title: "Vers la balnéo & le plateau", text: "Le couloir mène à la balnéothérapie puis au plateau technique." }
       ]
     },
     {
-      id: "soin", title: "La salle de soin", kicker: "Bilan & soins manuels",
-      intro: "Un espace individuel pour le bilan et les techniques manuelles.",
+      id: "soin", title: "Les soins", kicker: "Bilan & soins manuels", photo: PH + "soins.jpg",
+      intro: "Tables de soin pour le bilan et les techniques manuelles.",
       hotspots: [
-        { x: 86, y: 57, title: "Bilan kiné", text: "Évaluation complète : douleur, mobilité, force, tests fonctionnels. Il sert à fixer des objectifs et à construire votre programme." },
-        { x: 26, y: 62, title: "Dry needling", text: "Technique utilisant une aiguille fine pour traiter les points gâchettes musculaires et diminuer les douleurs et tensions." },
-        { x: 56, y: 52, title: "Massage", text: "Massage thérapeutique et de récupération : détente musculaire, circulation, diminution des douleurs." },
-        { x: 36, y: 50, title: "Thérapie manuelle", text: "Mobilisations et manipulations articulaires pour restaurer la mobilité et soulager la douleur, toujours associées à l'exercice." }
+        { x: 79, y: 58, title: "Bilan kiné", text: "Évaluation complète : douleur, mobilité, force, tests fonctionnels. Il sert à fixer des objectifs et à construire votre programme." },
+        { x: 13, y: 60, title: "Dry needling", text: "Technique utilisant une aiguille fine pour traiter les points gâchettes musculaires et diminuer les douleurs et tensions." },
+        { x: 32, y: 66, title: "Massage", text: "Massage thérapeutique et de récupération : détente musculaire, circulation, diminution des douleurs." },
+        { x: 56, y: 37, title: "Thérapie manuelle", text: "Mobilisations et manipulations articulaires pour restaurer la mobilité et soulager la douleur, toujours associées à l'exercice." }
       ]
     },
     {
-      id: "balneo", title: "La balnéothérapie", kicker: "Rééducation dans l'eau",
+      id: "couloir", title: "Le couloir vitré", kicker: "Lumière naturelle", photo: PH + "couloir.jpg",
+      intro: "Un passage lumineux entre jardin et balnéothérapie.",
+      hotspots: [
+        { x: 16, y: 48, title: "Espace extérieur", text: "Un jardin pour profiter de la lumière naturelle tout au long du parcours." },
+        { x: 84, y: 50, title: "Vue sur la balnéo", text: "Le bassin de balnéothérapie, visible depuis le couloir.", link: ["#balneo", "Voir la balnéo"] },
+        { x: 46, y: 38, title: "Plateau technique", text: "Au bout du couloir : le plateau technique et son espace cardio.", link: ["#plateau", "Entrer sur le plateau"] }
+      ]
+    },
+    {
+      id: "balneo", title: "La balnéothérapie", kicker: "Rééducation dans l'eau", photo: PH + "balneo.jpg",
       intro: "Un bassin d'eau chaude pour bouger plus tôt, avec moins de douleur.",
       hotspots: [
-        { x: 44, y: 76, title: "Cours collectifs", text: "Aquagym, bébés nageurs et autres cours en petit groupe. Renseignez-vous au cabinet pour le planning et les inscriptions.", tags: ["Aquagym", "Bébés nageurs"] },
-        { x: 70, y: 70, title: "Balnéo & post-opératoire", text: "La portance de l'eau allège le poids du corps : on remarche, on remobilise et on renforce plus tôt après une chirurgie (genou, hanche, épaule, rachis), avec moins de douleur." },
-        { x: 13, y: 66, title: "Matériel aquatique", text: "Frites, planches, haltères aquatiques : un matériel varié pour adapter la résistance de l'eau à chaque exercice." }
+        { x: 62, y: 53, title: "Cours collectifs", text: "Aquagym, bébés nageurs et autres cours en petit groupe. Renseignez-vous au cabinet pour le planning et les inscriptions.", tags: ["Aquagym", "Bébés nageurs"] },
+        { x: 46, y: 60, title: "Balnéo & post-opératoire", text: "La portance de l'eau allège le poids du corps : on remarche, on remobilise et on renforce plus tôt après une chirurgie (genou, hanche, épaule, rachis), avec moins de douleur." },
+        { x: 25, y: 68, title: "Accès sécurisé", text: "Escalier antidérapant et rampes de chaque côté pour entrer dans l'eau en toute sécurité." },
+        { x: 91, y: 42, title: "Douches", text: "Douches à disposition avant et après la séance." }
       ]
     },
     {
-      id: "plateau", title: "Le plateau technique", kicker: "Force, cardio & mesure",
+      id: "plateau", title: "Le plateau technique", kicker: "Force, cardio & récupération", photo: PH + "plateau.jpg",
       intro: "Cliquez sur une machine pour zoomer et découvrir son utilité.",
       zoom: true,
       items: [
-        { eq: "rack", x: 30, bottom: 600, s: 1.4 },
-        { eq: "skierg", x: 330, bottom: 600, s: 1.3 },
-        { eq: "voltra", x: 590, bottom: 600, s: 1.3 },
-        { eq: "reverse", x: 860, bottom: 600, s: 1.3 },
-        { eq: "legcurl", x: 1150, bottom: 600, s: 1.3 },
-        { eq: "rower", x: 10, bottom: 870, s: 1.6 },
-        { eq: "bike", x: 360, bottom: 870, s: 1.5 },
-        { eq: "legext", x: 680, bottom: 870, s: 1.5 },
-        { eq: "boxes", x: 1000, bottom: 870, s: 1.35 },
-        { eq: "madup", x: 1290, bottom: 712, s: .75 },
-        { eq: "emg", x: 1430, bottom: 712, s: .75 }
-      ]
-    },
-    {
-      id: "recup", title: "Zone récupération", kicker: "Plateau technique",
-      intro: "Table de soin, cryothérapie compressive et pressothérapie.",
-      zoom: true,
-      items: [
-        { eq: "table", x: 360, bottom: 820, s: 3.4 },
-        { eq: "gameready", x: 40, bottom: 840, s: 1.6 },
-        { eq: "normatec", x: 1080, bottom: 840, s: 2.1 }
-      ]
+        { eq: "rack", x: 63, y: 42 },
+        { eq: "skierg", x: 86, y: 37 },
+        { eq: "rower", x: 81, y: 59 },
+        { eq: "legext", x: 37, y: 56 },
+        { eq: "legcurl", x: 41, y: 49 },
+        { eq: "bike", x: 17, y: 45 },
+        { eq: "reverse", x: 27, y: 43 },
+        { eq: "gameready", x: 14, y: 58 },
+        { eq: "normatec", x: 12, y: 67 }
+      ],
+      special: ["voltra", "emg", "madup", "boxes"]
     }
   ];
 

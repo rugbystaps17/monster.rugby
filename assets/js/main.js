@@ -4,12 +4,10 @@
   var K = window.KAB;
   var page = document.body.getAttribute("data-page") || "";
 
-  var LOGO =
-    '<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">' +
-    '<ellipse cx="32" cy="32" rx="28" ry="19" transform="rotate(-35 32 32)" fill="currentColor"/>' +
-    '<path d="M21 43 L43 21" stroke="var(--logo-ink)" stroke-width="3" stroke-linecap="round"/>' +
-    '<path d="M27 33 l4 4 M30.5 29.5 l4 4 M34 26 l4 4" stroke="var(--logo-ink)" stroke-width="2.4" stroke-linecap="round"/>' +
-    "</svg>";
+  var LOGO = function (light) {
+    return '<span class="logo' + (light ? " logo-light" : "") + '"><span class="logo-word">Le <b>Kab</b> Chazay</span>' +
+      '<span class="logo-tag">Kiné sport &amp; balnéo</span></span>';
+  };
 
   var NAV = [
     ["index.html", "Accueil", "accueil"],
@@ -32,8 +30,7 @@
     header.className = "site-header";
     header.innerHTML =
       '<div class="container header-inner">' +
-      '<a class="brand" href="index.html" aria-label="' + K.name + ' — accueil">' + LOGO +
-      '<span class="brand-text"><strong>' + K.name + "</strong><small>" + K.tagline + "</small></span></a>" +
+      '<a class="brand" href="index.html" aria-label="' + K.name + ' — accueil">' + LOGO() + "</a>" +
       '<nav class="main-nav" id="main-nav" aria-label="Navigation principale">' + navLinks() + "</nav>" +
       '<a class="btn btn-rdv header-rdv" href="contact.html#rdv">' + icon("cal") + "<span>Prendre rendez-vous</span></a>" +
       '<button class="burger" aria-expanded="false" aria-controls="main-nav" aria-label="Menu"><span></span><span></span><span></span></button>' +
@@ -63,8 +60,7 @@
     footer.className = "site-footer";
     footer.innerHTML =
       '<div class="container footer-grid">' +
-      '<div><a class="brand brand-footer" href="index.html">' + LOGO +
-      '<span class="brand-text"><strong>' + K.name + "</strong><small>" + K.tagline + "</small></span></a>" +
+      '<div><a class="brand brand-footer" href="index.html">' + LOGO(true) + "</a>" +
       '<p class="muted">Rééducation, performance et prévention, pour tous les patients et tous les sportifs.</p></div>' +
       "<div><h4>Nous trouver</h4><p>" + K.addressFull + '</p><a class="link" href="' + K.mapsDir + '" target="_blank" rel="noopener">Itinéraire Google Maps →</a></div>' +
       '<div><h4>Contact</h4><p><a class="link" href="tel:' + K.phoneHref + '">' + K.phone + "</a></p>" +
@@ -72,7 +68,7 @@
       '<div class="socials">' + socials() + "</div></div>" +
       "<div><h4>Plan du site</h4><nav class=\"footer-nav\">" + navLinks() + "</nav></div>" +
       "</div>" +
-      '<div class="container footer-bottom"><span>© ' + new Date().getFullYear() + " " + K.name + " — Cabinet de kinésithérapie, Chazay-d'Azergues</span></div>";
+      '<div class="container footer-bottom"><span>© ' + new Date().getFullYear() + " " + K.name + " — Kinésithérapie du sport &amp; balnéothérapie, Chazay-d'Azergues</span></div>";
   }
 
   function socials() {
