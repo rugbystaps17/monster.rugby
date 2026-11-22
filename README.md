@@ -56,3 +56,10 @@ Les textes de la visite suivent le plan d'aménagement : entrée face au parking
 (22 m²), 6 box de soin (10 à 17 m²), espace balnéo avec 3 cabines et douche commune, bassin 6 × 3 m (1,30 m de
 profondeur), couloir le long du bassin vers le plateau technique (136 m²) et la salle technique attenante (30 m²).
 La vue aérienne du survol reprend l'emprise du bâtiment.
+
+## Version de test (GitHub Pages)
+
+Le site est publié en test sur https://rugbystaps17.github.io/monster.rugby/ (Réglages du dépôt → Pages →
+« Deploy from a branch » → branche `claude/le-kab-website-8adehq`, dossier `/ (root)`).
+Les pages contiennent `<meta name="robots" content="noindex, nofollow">` pour que Google ne référence pas
+cette version (avis d'exemple, numéro provisoire). **À retirer à la mise en ligne officielle.**
