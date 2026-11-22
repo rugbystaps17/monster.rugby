@@ -15,49 +15,45 @@
      parking devant le bâtiment, entrée face au parking)
      ========================================================= */
   function aerial() {
-    var cars = "", col = ["#d9dde0", "#2f3a42", "#9aa3a9", "#c0392b", "#ecf0f1", "#4a6274", "#d9dde0", "#1f2a30", "#b8bfc4", "#e4e7e9"];
-    // rangée contre le bâtiment (hors place devant la porte)
-    [600, 670, 900, 970, 1040, 1110, 1180, 1250].forEach(function (x, i) {
+    // Emprise d'après le plan du RDC (échelle réduite, retourné : l'entrée fait face au parking, en bas)
+    var cars = "", col = ["#d9dde0", "#2f3a42", "#9aa3a9", "#c0392b", "#ecf0f1", "#4a6274", "#d9dde0", "#1f2a30", "#b8bfc4", "#e4e7e9", "#6b7a85"];
+    [400, 470, 540, 610, 680, 880, 950, 1020, 1090].forEach(function (x, i) {
       cars += '<g transform="translate(' + (x + 9) + ' 478)"><rect width="50" height="92" rx="13" fill="' + col[i] + '"/><rect x="6" y="14" width="38" height="20" rx="5" fill="#25313a" opacity=".85"/><rect x="6" y="62" width="38" height="14" rx="5" fill="#25313a" opacity=".7"/></g>';
     });
-    [700, 840, 1050, 1190].forEach(function (x, i) {
-      cars += '<g transform="translate(' + (x + 9) + ' 650)"><rect width="50" height="92" rx="13" fill="' + col[i + 5] + '"/><rect x="6" y="58" width="38" height="20" rx="5" fill="#25313a" opacity=".85"/><rect x="6" y="16" width="38" height="14" rx="5" fill="#25313a" opacity=".7"/></g>';
+    [500, 640, 900, 1110].forEach(function (x, i) {
+      cars += '<g transform="translate(' + (x + 9) + ' 650)"><rect width="50" height="92" rx="13" fill="' + col[i + 6] + '"/><rect x="6" y="58" width="38" height="20" rx="5" fill="#25313a" opacity=".85"/><rect x="6" y="16" width="38" height="14" rx="5" fill="#25313a" opacity=".7"/></g>';
     });
     var lines = "";
-    for (var x = 590; x <= 1330; x += 70) lines += '<path d="M' + x + ' 470v110M' + (x + 30) + ' 640v110" stroke="#f3f3f0" stroke-width="3"/>';
+    for (var x = 390; x <= 1170; x += 70) { if (x > 740 && x < 860) continue; lines += '<path d="M' + x + ' 470v110M' + x + ' 640v110" stroke="#f3f3f0" stroke-width="3"/>'; }
     var trees = "";
-    [[1460, 220, 70], [1520, 420, 60], [1450, 620, 66], [1380, 840, 58], [180, 120, 55], [120, 380, 62], [210, 640, 52], [1100, 860, 50], [920, 70, 44]].forEach(function (t) {
+    [[1320, 150, 62], [1440, 330, 66], [1400, 560, 58], [1330, 840, 54], [90, 120, 50], [1180, 60, 44], [980, 860, 46]].forEach(function (t) {
       trees += '<circle cx="' + (t[0] + 12) + '" cy="' + (t[1] + 14) + '" r="' + t[2] + '" fill="#000" opacity=".18"/><circle cx="' + t[0] + '" cy="' + t[1] + '" r="' + t[2] + '" fill="#4f7f4a"/><circle cx="' + (t[0] - t[2] * .3) + '" cy="' + (t[1] - t[2] * .3) + '" r="' + t[2] * .5 + '" fill="#63955a"/>';
     });
-    var road = "M 470 -40 C 380 260, 330 520, 560 800 S 980 960, 1120 980";
+    var road = "M 250 -40 C 180 260, 180 560, 420 800 S 900 960, 1120 990";
+    var roof = 'fill="#d3d6d6" stroke="#8d9496" stroke-width="5"';
     return '<svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">' +
       '<rect width="1600" height="900" fill="#9fae95"/>' +
-      '<rect x="0" y="0" width="330" height="900" fill="#b9b4aa"/><rect x="20" y="180" width="260" height="200" fill="#d6d2ca" stroke="#a8a299" stroke-width="5"/><rect x="40" y="480" width="230" height="260" fill="#cfcac1" stroke="#a8a299" stroke-width="5"/>' +
-      '<rect x="560" y="40" width="820" height="90" fill="#c7c2b8"/>' +
       // parking
-      '<path d="M520 460 H1380 V770 H640 C 560 690, 520 600, 520 460 Z" fill="#6d757b"/>' + lines + cars +
+      '<path d="M330 460 H1190 V770 H460 C 380 700, 330 600, 330 460 Z" fill="#6d757b"/>' + lines + cars +
       '<path d="M800 470 V780" stroke="#f3f3f0" stroke-width="4" stroke-dasharray="18 14" opacity=".7"/>' +
-      // place PMR
-      '<g transform="translate(560 640)"><rect width="56" height="96" fill="#2f6fb5" opacity=".9"/><circle cx="28" cy="36" r="6" fill="#fff"/><path d="M28 44v16h12l4 14M28 52h12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></g>' +
-      // route courbe
+      '<g transform="translate(344 650)"><rect width="52" height="92" fill="#2f6fb5" opacity=".9"/><circle cx="26" cy="34" r="6" fill="#fff"/><path d="M26 42v16h12l4 14M26 50h12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></g>' +
+      // rue
       '<path d="' + road + '" stroke="#565d62" stroke-width="120" fill="none"/>' +
       '<path id="roadLine" d="' + road + '" stroke="#f1f0ea" stroke-width="4" fill="none" stroke-dasharray="36 30"/>' +
-      '<text font-family="Inter,sans-serif" font-weight="700" font-size="22" letter-spacing="5" fill="#f1f0ea" opacity=".85" dy="-16"><textPath href="#roadLine" startOffset="12%">RUE MARIUS BERLIET</textPath></text>' +
-      // clôture + portail
-      '<path d="M512 140 C 500 300, 505 420, 520 470" stroke="#8b9399" stroke-width="5" stroke-dasharray="10 6" fill="none"/>' +
-      '<rect x="508" y="470" width="20" height="38" fill="#4f565b"/><text x="518" y="498" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="20" fill="#fff">7</text>' +
-      // bâtiment
-      '<rect x="572" y="160" width="800" height="300" fill="#000" opacity=".2"/>' +
-      '<rect x="560" y="148" width="800" height="304" fill="#d3d6d6" stroke="#8d9496" stroke-width="6"/>' +
-      '<rect x="1060" y="148" width="300" height="170" fill="#b9bfc1" stroke="#8d9496" stroke-width="6"/>' +
-      '<path d="M1010 148 V452" stroke="#8d9496" stroke-width="5"/>' +
-      '<rect x="600" y="180" width="80" height="54" fill="#aeb5b8"/><rect x="900" y="180" width="70" height="54" fill="#aeb5b8"/>' +
-      '<rect x="1110" y="360" width="80" height="50" fill="#aeb5b8"/>' +
-      // façade terracotta (bord avant)
-      '<rect x="560" y="438" width="450" height="16" fill="#c4612f"/><rect x="1010" y="438" width="350" height="16" fill="#c4612f"/>' +
-      // logo toit
-      '<text x="785" y="335" text-anchor="middle" font-family="Outfit,Inter,sans-serif" font-size="66" fill="#17392e"><tspan font-weight="300">Le </tspan><tspan font-weight="800">Kab</tspan></text>' +
-      '<text x="785" y="372" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="16" letter-spacing="6" fill="#17392e" opacity=".7">CHAZAY</text>' +
+      '<text font-family="Inter,sans-serif" font-weight="700" font-size="22" letter-spacing="5" fill="#f1f0ea" opacity=".85" dy="-16"><textPath href="#roadLine" startOffset="14%">RUE MARIUS BERLIET</textPath></text>' +
+      '<rect x="318" y="470" width="20" height="38" fill="#4f565b"/><text x="328" y="498" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="20" fill="#fff">7</text>' +
+      // ombres
+      '<path d="M371 30 L688 30 L688 205 L939 205 L939 462 L539 462 L539 205 L409 205 Z" fill="#000" opacity=".18"/>' +
+      // plateau technique (aile arrière) + cellule voisine + bâtiment principal
+      '<path d="M359 18 L676 18 L676 193 L397 193 Z" ' + roof + '/>' +
+      '<rect x="527" y="193" width="147" height="257" fill="#c9c6c0" stroke="#8d9496" stroke-width="5"/>' +
+      '<rect x="926" y="200" width="250" height="250" fill="#c9c6c0" stroke="#8d9496" stroke-width="5"/>' +
+      '<rect x="674" y="153" width="252" height="297" ' + roof + '/>' +
+      '<rect x="700" y="176" width="60" height="40" fill="#aeb5b8"/><rect x="420" y="60" width="80" height="50" fill="#aeb5b8"/>' +
+      '<text x="517" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="13" letter-spacing="3" fill="#17392e" opacity=".55">PLATEAU</text>' +
+      '<rect x="674" y="436" width="252" height="16" fill="#c4612f"/><rect x="926" y="436" width="250" height="16" fill="#c4612f"/>' +
+      '<text x="800" y="330" text-anchor="middle" font-family="Outfit,Inter,sans-serif" font-size="56" fill="#17392e"><tspan font-weight="300">Le </tspan><tspan font-weight="800">Kab</tspan></text>' +
+      '<text x="800" y="362" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="14" letter-spacing="6" fill="#17392e" opacity=".7">CHAZAY</text>' +
       // marquise + porte
       '<rect x="735" y="452" width="130" height="18" fill="#cfe3ea" opacity=".9" stroke="#7d8a90" stroke-width="2"/><rect x="782" y="444" width="36" height="10" fill="#2b3135"/>' +
       trees + "</svg>";

@@ -151,7 +151,7 @@
     },
     bike: {
       name: "Bike & espace cardio", sub: "Équipement cardio", room: "plateau", photo: IMG + "cardio.jpg",
-      text: "Vélos, tapis et espace cardio vitré pour l'échauffement, le rodage du genou après une opération et le fractionné.",
+      text: "Vélos et tapis dans l'espace vitré attenant au plateau, pour l'échauffement, le rodage du genou après une opération et le fractionné.",
       bullets: ["Rodage articulaire en douceur (post-op genou/hanche)", "Séances de fractionné pour retrouver le souffle", "Reprise progressive de la course sur tapis"],
       spots: [[73, 45, "Vélos", "Selle réglée selon l'amplitude autorisée du genou."], [22, 45, "Tapis de course", "Reprise de la marche puis de la course, vitesse contrôlée."]]
     },
@@ -192,47 +192,47 @@
   var PH = "assets/img/cabinet/";
   var ROOMS = [
     {
-      id: "accueil", title: "L'accueil", kicker: "Première étape", photo: PH + "accueil.jpg",
-      intro: "Dès la porte poussée, l'équipe vous accueille et vous guide.",
+      id: "accueil", title: "L'accueil", kicker: "Entrée · accueil · attente", photo: PH + "accueil.jpg",
+      intro: "Dès la porte poussée : l'accueil au centre, la salle d'attente juste à côté.",
       hotspots: [
-        { x: 46, y: 62, title: "Accueil & prise de rendez-vous", text: "Notre secrétariat vous accueille, planifie vos séances et répond à vos questions. Rendez-vous aussi possibles par téléphone ou sur Doctolib.", link: ["contact.html#rdv", "Prendre rendez-vous"] },
+        { x: 46, y: 62, title: "Accueil & prise de rendez-vous", text: "Le secrétariat vous accueille au centre du cabinet, planifie vos séances et répond à vos questions. Rendez-vous aussi possibles par téléphone ou sur Doctolib.", link: ["contact.html#rdv", "Prendre rendez-vous"] },
         { x: 65, y: 63, title: "Les premiers pas", text: "Première séance ? Pensez à apporter votre ordonnance, votre carte Vitale, votre mutuelle, vos examens (radios, IRM, compte rendu opératoire) et une tenue confortable." },
-        { x: 88, y: 68, title: "Salle d'attente", text: "Un espace lumineux pour patienter quelques minutes avant votre séance." },
-        { x: 11, y: 52, title: "Salles de soin", text: "Des salles individuelles, au calme, pour le bilan et les soins manuels." },
-        { x: 72, y: 45, title: "Vers la balnéo & le plateau", text: "Le couloir mène à la balnéothérapie puis au plateau technique." }
+        { x: 88, y: 68, title: "Salle d'attente", text: "Une salle d'attente de 22 m², lumineuse, face à l'entrée." },
+        { x: 11, y: 52, title: "Box de soin", text: "Les 6 box de soin individuels (de 10 à 17 m²) s'ouvrent de part et d'autre de l'accueil." },
+        { x: 72, y: 45, title: "Vers la balnéo & le plateau", text: "Le couloir central mène à l'espace balnéo, puis au plateau technique." }
       ]
     },
     {
       id: "soin", title: "Les soins", kicker: "Bilan & soins manuels", photo: PH + "soins.jpg",
-      intro: "Tables de soin pour le bilan et les techniques manuelles.",
+      intro: "6 box individuels de 10 à 17 m², et des tables de soin sur le plateau.",
       hotspots: [
-        { x: 79, y: 58, title: "Bilan kiné", text: "Évaluation complète : douleur, mobilité, force, tests fonctionnels. Il sert à fixer des objectifs et à construire votre programme." },
+        { x: 79, y: 58, title: "Bilan kiné", text: "Évaluation complète en box individuel : douleur, mobilité, force, tests fonctionnels. Il sert à fixer des objectifs et à construire votre programme." },
         { x: 13, y: 60, title: "Dry needling", text: "Technique utilisant une aiguille fine pour traiter les points gâchettes musculaires et diminuer les douleurs et tensions." },
         { x: 32, y: 66, title: "Massage", text: "Massage thérapeutique et de récupération : détente musculaire, circulation, diminution des douleurs." },
         { x: 56, y: 37, title: "Thérapie manuelle", text: "Mobilisations et manipulations articulaires pour restaurer la mobilité et soulager la douleur, toujours associées à l'exercice." }
       ]
     },
     {
-      id: "couloir", title: "Le couloir vitré", kicker: "Lumière naturelle", photo: PH + "couloir.jpg",
-      intro: "Un passage lumineux entre jardin et balnéothérapie.",
-      hotspots: [
-        { x: 16, y: 48, title: "Espace extérieur", text: "Un jardin pour profiter de la lumière naturelle tout au long du parcours." },
-        { x: 84, y: 50, title: "Vue sur la balnéo", text: "Le bassin de balnéothérapie, visible depuis le couloir.", link: ["#balneo", "Voir la balnéo"] },
-        { x: 46, y: 38, title: "Plateau technique", text: "Au bout du couloir : le plateau technique et son espace cardio.", link: ["#plateau", "Entrer sur le plateau"] }
-      ]
-    },
-    {
       id: "balneo", title: "La balnéothérapie", kicker: "Rééducation dans l'eau", photo: PH + "balneo.jpg",
-      intro: "Un bassin d'eau chaude pour bouger plus tôt, avec moins de douleur.",
+      intro: "Un bassin de 6 × 3 m, 1,30 m de profondeur, pour bouger plus tôt avec moins de douleur.",
       hotspots: [
-        { x: 62, y: 53, title: "Cours collectifs", text: "Aquagym, bébés nageurs et autres cours en petit groupe. Renseignez-vous au cabinet pour le planning et les inscriptions.", tags: ["Aquagym", "Bébés nageurs"] },
-        { x: 46, y: 60, title: "Balnéo & post-opératoire", text: "La portance de l'eau allège le poids du corps : on remarche, on remobilise et on renforce plus tôt après une chirurgie (genou, hanche, épaule, rachis), avec moins de douleur." },
-        { x: 25, y: 68, title: "Accès sécurisé", text: "Escalier antidérapant et rampes de chaque côté pour entrer dans l'eau en toute sécurité." },
-        { x: 91, y: 42, title: "Douches", text: "Douches à disposition avant et après la séance." }
+        { x: 62, y: 53, title: "Cours collectifs", text: "Aquagym, bébés nageurs et autres cours en petit groupe dans le bassin de 6 × 3 m. Renseignez-vous au cabinet pour le planning et les inscriptions.", tags: ["Aquagym", "Bébés nageurs"] },
+        { x: 46, y: 60, title: "Balnéo & post-opératoire", text: "La portance de l'eau allège le poids du corps : on remarche, on remobilise et on renforce plus tôt après une chirurgie (genou, hanche, épaule, rachis), avec moins de douleur. Profondeur de 1,30 m." },
+        { x: 25, y: 68, title: "Accès au bassin", text: "Marches immergées et rampes pour entrer dans l'eau en toute sécurité." },
+        { x: 91, y: 42, title: "Vestiaires & douche", text: "3 cabines de change individuelles, une douche commune et des sanitaires à proximité immédiate du bassin." }
       ]
     },
     {
-      id: "plateau", title: "Le plateau technique", kicker: "Force, cardio & récupération", photo: PH + "plateau.jpg",
+      id: "couloir", title: "Le couloir vitré", kicker: "Vers le plateau", photo: PH + "couloir.jpg",
+      intro: "Le couloir longe le bassin et mène au plateau technique.",
+      hotspots: [
+        { x: 16, y: 48, title: "Espace extérieur", text: "Un espace vert le long du couloir, pour profiter de la lumière naturelle." },
+        { x: 84, y: 50, title: "Vue sur la balnéo", text: "Le couloir longe le bassin de balnéothérapie, visible à travers la vitre.", link: ["#balneo", "Voir la balnéo"] },
+        { x: 46, y: 38, title: "Plateau technique", text: "Au bout du couloir : le plateau technique de 136 m².", link: ["#plateau", "Entrer sur le plateau"] }
+      ]
+    },
+    {
+      id: "plateau", title: "Le plateau technique", kicker: "136 m² · force, cardio & récupération", photo: PH + "plateau.jpg",
       intro: "Cliquez sur une machine pour zoomer et découvrir son utilité.",
       zoom: true,
       items: [

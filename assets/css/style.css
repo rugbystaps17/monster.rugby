@@ -299,7 +299,7 @@ p { margin: 0 0 1em; }
 @media (max-width: 960px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 620px) { .team-grid { grid-template-columns: 1fr; } }
 .member { background: var(--surface); border-radius: 22px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
-.member-media { position: relative; aspect-ratio: 4 / 4.2; background: linear-gradient(160deg, #1b4a63, var(--navy)); overflow: hidden; }
+.member-media { position: relative; aspect-ratio: 4 / 4.2; background: linear-gradient(160deg, #2c5a49, var(--navy)); overflow: hidden; }
 .member-media video, .member-media img { width: 100%; height: 100%; object-fit: cover; }
 .member-media .silhouette { position: absolute; inset: auto 0 0 0; height: 88%; margin-inline: auto; color: rgba(255,255,255,.12); }
 .member-media .num {
@@ -604,3 +604,9 @@ p { margin: 0 0 1em; }
 .flyover-door .leaf { background: linear-gradient(90deg, rgba(190,205,210,.55), rgba(230,238,240,.35)); border: 10px solid #2b3135; backdrop-filter: blur(3px); }
 .flyover-door .leaf::after { background: #15191b; width: 8px; height: 120px; margin-top: -60px; }
 .flyover-door .glass { display: none; }
+.assist-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+@media (max-width: 960px) { .assist-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 520px) { .assist-grid { grid-template-columns: repeat(2, 1fr); } }
+.assist { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 14px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.assist-av { width: 64px; height: 64px; border-radius: 50%; background: var(--kab-soft); color: var(--kab-dark); display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; margin-bottom: 8px; border: 2px dashed var(--kab); }
+.assist small { color: var(--muted); }

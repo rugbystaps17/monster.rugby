@@ -19,7 +19,9 @@ Sur toutes les pages : logo / nom, menu, bouton « Prendre rendez-vous » dans l
 ## À compléter (informations provisoires)
 
 1. **`assets/js/config.js`** : téléphone, e-mail, lien Doctolib, Instagram / Facebook, horaires.
-2. **`equipe.html`** (tableau `TEAM`) : noms, rôles, spécialités, parcours, photo ou vidéo, lien Doctolib de chaque kiné.
+2. **`equipe.html`** (tableau `TEAM`) : les 3 associés (Quentin Lorie, Max Fajou, Antoine Grange) sont en place avec leur lien Doctolib ;
+   leurs **formations sont à recopier** depuis leurs profils Doctolib, avec spécialités et photo/vidéo.
+   Les 6 assistants apparaissent en « Bientôt » : remplacer les cartes `.assist` quand l'équipe sera connue.
 3. **`assets/js/reviews.js`** : les avis affichés sont **des exemples fictifs**. Remplacez-les par de vrais avis Google
    (copiés à la main) puis passez `PLACEHOLDER` à `false`. Pour un affichage automatique, il faut un widget
    (Elfsight, Trustindex…) ou l'API Google Places (clé API + petit serveur).
@@ -46,3 +48,10 @@ Sur toutes les pages : logo / nom, menu, bouton « Prendre rendez-vous » dans l
 Le formulaire ouvre la messagerie du patient avec un e-mail pré-rempli adressé au cabinet (pas de serveur
 nécessaire). Pour recevoir les demandes directement, on peut le brancher sur Formspree / Netlify Forms.
 Ne pas collecter de données médicales par ce biais.
+
+## Plan du cabinet (RDC)
+
+Les textes de la visite suivent le plan d'aménagement : entrée face au parking, accueil central et salle d'attente
+(22 m²), 6 box de soin (10 à 17 m²), espace balnéo avec 3 cabines et douche commune, bassin 6 × 3 m (1,30 m de
+profondeur), couloir le long du bassin vers le plateau technique (136 m²) et la salle technique attenante (30 m²).
+La vue aérienne du survol reprend l'emprise du bâtiment.
