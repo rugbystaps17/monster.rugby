@@ -129,7 +129,7 @@
   var TEAM = [
     {
       name: "Quentin Lorie", role: "Masseur-kinésithérapeute · Associé",
-      photo: "", video: "", doctolib: "https://www.doctolib.fr/masseur-kinesitherapeute/villeurbanne/quentin-lorie",
+      photo: "assets/img/equipe/quentin-lorie.jpg", video: "", doctolib: "https://www.doctolib.fr/masseur-kinesitherapeute/villeurbanne/quentin-lorie",
       chips: ["Kiné du sport", "Dry needling", "Épaule", "Rachis lombaire", "Course à pied"],
       parcours: [
         ["2026", "Troubles neurologiques en musculo-squelettique", "Bryan Littré"],
@@ -145,7 +145,7 @@
     },
     {
       name: "Max Fajou", role: "Masseur-kinésithérapeute · Associé",
-      photo: "", video: "", doctolib: "https://www.doctolib.fr/masseur-kinesitherapeute/villeurbanne/max-fajou",
+      photo: "assets/img/equipe/max-fajou.jpg", video: "", doctolib: "https://www.doctolib.fr/masseur-kinesitherapeute/villeurbanne/max-fajou",
       chips: [],
       parcours: [
         ["", "Diplôme d'État de masseur-kinésithérapeute", "À compléter (voir profil Doctolib)"],
@@ -154,7 +154,7 @@
     },
     {
       name: "Antoine Grange", role: "Masseur-kinésithérapeute · Associé",
-      photo: "", video: "", doctolib: "https://www.doctolib.fr/masseur-kinesitherapeute/lyon/antoine-grange",
+      photo: "assets/img/equipe/antoine-grange.jpg", video: "", doctolib: "https://www.doctolib.fr/masseur-kinesitherapeute/lyon/antoine-grange",
       chips: ["Kiné du sport", "Course à pied"],
       parcours: [
         ["2024", "Kinésithérapie du sport", "Kinésport formation"],
@@ -173,7 +173,7 @@
         : m.photo ? '<img src="' + m.photo + '" alt="' + esc(m.name) + '">' : SIL;
       var id = "parcours-" + i;
       return '<article class="member reveal d' + (i % 3) + '">' +
-        '<div class="member-media">' + media +
+        '<div class="member-media' + (m.photo || m.video ? ' has-photo' : '') + '">' + media +
         '<span class="num">' + String(i + 1).padStart(2, "0") + '</span>' +
         '<div class="mini-try"><span class="mini-line"></span>' + BALL + '<span class="essai-tag">Essai !</span></div></div>' +
         '<div class="member-body"><h3>' + esc(m.name) + '</h3><div class="member-role">' + esc(m.role) + '</div>' +
