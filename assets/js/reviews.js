@@ -15,7 +15,7 @@
     { name: "Exemple A.", when: "il y a 2 semaines", text: "Rééducation du genou après ligamentoplastie : suivi au top, plateau technique incroyable. Je recommande !" },
     { name: "Exemple B.", when: "il y a 1 mois", text: "Équipe à l'écoute et très professionnelle. Les séances de balnéo m'ont énormément aidé après mon opération." },
     { name: "Exemple C.", when: "il y a 1 mois", text: "Cabinet moderne, accueil chaleureux, et de vraies explications à chaque séance." },
-    { name: "Exemple D.", when: "il y a 2 mois", text: "Retour au rugby après une entorse de cheville grâce à un programme progressif et très bien encadré." },
+    { name: "Exemple D.", when: "il y a 2 mois", text: "Retour au sport après une entorse de cheville grâce à un programme progressif et très bien encadré." },
     { name: "Exemple E.", when: "il y a 3 mois", text: "Super expérience, matériel de pointe (Voltra, BFR…) et des kinés passionnés." },
     { name: "Exemple F.", when: "il y a 3 mois", text: "Parking facile, horaires flexibles et des soins efficaces. Merci à toute l'équipe !" },
     { name: "Exemple G.", when: "il y a 4 mois", text: "Lombalgie chronique enfin sous contrôle grâce aux exercices et à la thérapie manuelle." },

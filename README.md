@@ -9,10 +9,10 @@ Ouvrir `index.html` dans un navigateur, ou héberger le dossier tel quel
 | Fichier | Contenu |
 |---|---|
 | `index.html` | Accueil : présentation, philosophie, accès rapides, carte + itinéraire, avis Google défilants |
-| `equipe.html` | Animation « Essai ! », cartes des kinés avec parcours / formations dépliables et lien Doctolib |
+| `equipe.html` | Les 3 associés (photo ou vidéo, formations dépliables, lien Doctolib) et les 6 assistants à venir |
 | `expertise.html` | Silhouette interactive (face / dos) : clic sur une zone → pathologies + approche |
 | `cabinet.html` | Survol aérien → porte d'entrée → visite des salles à points d'intérêt, zoom sur chaque machine, fiche produit interactive, et mode « matériel un à un » |
-| `contact.html` | Doctolib, téléphone, formulaire de demande de RDV, horaires (avec « ouvert maintenant »), accès, parking, carte, Instagram |
+| `contact.html` | Doctolib, téléphone, horaires (avec « ouvert maintenant »), accès, parking, carte, Instagram |
 
 Sur toutes les pages : logo / nom, menu, bouton « Prendre rendez-vous » dans l'en-tête et bouton flottant toujours visible.
 
@@ -25,7 +25,6 @@ Sur toutes les pages : logo / nom, menu, bouton « Prendre rendez-vous » dans l
 3. **`assets/js/reviews.js`** : les avis affichés sont **des exemples fictifs**. Remplacez-les par de vrais avis Google
    (copiés à la main) puis passez `PLACEHOLDER` à `false`. Pour un affichage automatique, il faut un widget
    (Elfsight, Trustindex…) ou l'API Google Places (clé API + petit serveur).
-4. **`contact.html`** : accessibilité PMR à préciser.
 5. **`assets/js/cabinet-data.js`** : textes des salles et du matériel (planning balnéo, location Game Ready…).
 
 ## Photos
@@ -43,11 +42,13 @@ Sur toutes les pages : logo / nom, menu, bouton « Prendre rendez-vous » dans l
   Une vraie vidéo de drone pourra remplacer le dessin (`aerial()` dans `cabinet.js`).
 - Équipe : champs `photo` ou `video` de chaque membre dans `equipe.html`.
 
-## Formulaire de demande de RDV
+## Vidéos de l'équipe
 
-Le formulaire ouvre la messagerie du patient avec un e-mail pré-rempli adressé au cabinet (pas de serveur
-nécessaire). Pour recevoir les demandes directement, on peut le brancher sur Formspree / Netlify Forms.
-Ne pas collecter de données médicales par ce biais.
+Chaque associé peut avoir une courte vidéo à la place de sa photo (un mouvement, un exercice…) :
+déposer le fichier dans `assets/video/equipe/` puis renseigner `video: "assets/video/equipe/prenom.mp4"`
+dans le tableau `TEAM` de `equipe.html`. La photo reste affichée en attendant le chargement, et la vidéo
+se lance quand la carte apparaît à l'écran. Conseils : 5 à 8 s, sans son, format portrait (4:5),
+H.264/MP4 de moins de 3 Mo, mouvement qui boucle proprement.
 
 ## Plan du cabinet (RDC)
 

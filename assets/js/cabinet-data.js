@@ -176,8 +176,8 @@
     gameready: {
       name: "Game Ready", sub: "Cryothérapie & compression", room: "recup", photo: IMG + "gameready.jpg", contain: true,
       text: "Associe le froid et la compression pneumatique pour diminuer la douleur et l'œdème.",
-      bullets: ["Indispensable après une chirurgie ou une entorse", "Réduit le gonflement et soulage la douleur", "Location possible en post-opératoire pour accélérer la récupération à domicile"],
-      note: "Renseignez-vous au cabinet pour la location de la Game Ready.",
+      bullets: ["Indispensable après une chirurgie ou une entorse", "Réduit le gonflement et soulage la douleur", "Location sur demande en post-opératoire, pour poursuivre la récupération à domicile"],
+      note: "Location de la Game Ready sur demande : renseignez-vous au cabinet.",
       spots: [[32, 32, "Réservoir d'eau glacée", "L'eau froide circule en continu jusqu'au manchon."], [75, 26, "Écran & molette", "Réglage de la température, de la pression et de la durée."], [55, 11, "Poignée", "Unité portable : idéale pour la location à domicile."], [27, 80, "Manchon", "Froid et compression en même temps ; modèles genou, cheville, épaule, dos…"]]
     },
     normatec: {
@@ -210,7 +210,7 @@
         { x: 8, y: 46, img: "assets/img/cabinet/dry-needling.jpg", title: "Dry needling", text: "Technique utilisant une aiguille fine pour traiter les points gâchettes musculaires et diminuer les douleurs et tensions." },
         { x: 45, y: 56, title: "Massage", text: "Massage thérapeutique et de récupération sur table électrique réglable : détente musculaire, circulation, diminution des douleurs." },
         { x: 57, y: 43, title: "Thérapie manuelle", text: "Mobilisations et manipulations articulaires pour restaurer la mobilité et soulager la douleur, toujours associées à l'exercice." },
-        { eq: "gameready", x: 70, y: 33, title: "Game Ready", text: "Cryothérapie et compression directement en box, juste après la séance. Location possible en post-opératoire." },
+        { eq: "gameready", x: 70, y: 33, title: "Game Ready", text: "Cryothérapie et compression directement en box, juste après la séance. Location sur demande en post-opératoire." },
         { eq: "normatec", x: 86, y: 40, title: "Normatec", text: "Bottes de pressothérapie pour la récupération et les jambes lourdes." }
       ]
     },

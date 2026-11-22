@@ -16,75 +16,18 @@
   <header id="site-header"></header>
 
   <main id="main">
-    <!-- ===== Animation « Essai ! » =====
-         Pour utiliser une vraie vidéo à la place, remplacez le <svg> par :
-         <video src="assets/video/essai.mp4" autoplay muted playsinline></video> -->
-    <section class="try-hero" id="try-hero">
-      <div class="try-stage">
-        <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1c27"/><stop offset="1" stop-color="#143447"/></linearGradient>
-            <radialGradient id="light" cx=".5" cy="0" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
-          </defs>
-          <rect width="1200" height="500" fill="url(#sky)"/>
-          <ellipse cx="200" cy="0" rx="300" ry="220" fill="url(#light)"/>
-          <ellipse cx="1000" cy="0" rx="300" ry="220" fill="url(#light)"/>
-          <!-- tribunes -->
-          <g fill="#0f2938"><path d="M0 230 L1200 230 L1200 270 L0 270z"/></g>
-          <g fill="#ffffff" opacity=".06">
-            <circle cx="80" cy="245" r="5"/><circle cx="140" cy="250" r="5"/><circle cx="230" cy="244" r="5"/><circle cx="320" cy="252" r="5"/><circle cx="410" cy="246" r="5"/><circle cx="520" cy="250" r="5"/><circle cx="640" cy="244" r="5"/><circle cx="760" cy="251" r="5"/><circle cx="880" cy="246" r="5"/><circle cx="990" cy="250" r="5"/><circle cx="1110" cy="245" r="5"/>
-          </g>
-          <!-- terrain -->
-          <path d="M0 270 H1200 V500 H0z" fill="#0f8f6a"/>
-          <g fill="#13a57b"><path d="M0 270h120l-40 230H0z"/><path d="M240 270h120l-20 230H190z"/><path d="M480 270h120l0 230H480z"/><path d="M720 270h120l20 230H730z"/></g>
-          <path d="M900 270 H1200 V500 H930z" fill="#0b7657"/>
-          <!-- ligne d'essai -->
-          <path d="M900 270 L930 500" stroke="#fff" stroke-width="5"/>
-          <path d="M1130 270 L1170 500" stroke="#fff" stroke-width="3" opacity=".6"/>
-          <!-- poteaux -->
-          <g stroke="#fff" stroke-width="7" stroke-linecap="round"><path d="M985 330 V60"/><path d="M1085 320 V50"/><path d="M985 200 H1085"/></g>
-          <text x="1035" y="300" text-anchor="middle" fill="#fff" opacity=".5" font-family="Barlow Condensed, sans-serif" font-weight="800" font-size="40">LE KAB</text>
-          <!-- trajectoire -->
-          <path id="tryPath" d="M120 430 C 380 120, 760 80, 1010 400" fill="none"/>
-          <path class="trail" d="M120 430 C 380 120, 760 80, 1010 400" fill="none" stroke="#15b58a" stroke-width="4" stroke-dasharray="4 12" stroke-linecap="round" opacity=".8">
-            <animate id="trailAnim" attributeName="stroke-dashoffset" from="1300" to="0" dur="1.9s" begin="indefinite" fill="freeze"/>
-          </path>
-          <circle cx="1010" cy="400" r="10" fill="#15b58a" opacity="0">
-            <animate attributeName="r" values="10;170" dur=".9s" begin="ballAnim.end" fill="freeze"/>
-            <animate attributeName="opacity" values=".9;0" dur=".9s" begin="ballAnim.end" fill="freeze"/>
-          </circle>
-          <!-- ballon -->
-          <g>
-            <g>
-              <ellipse rx="30" ry="18" fill="#f5f4ef" stroke="#0d2433" stroke-width="2"/>
-              <path d="M-20 0 H20" stroke="#0d2433" stroke-width="2.5"/>
-              <path d="M-7 -5v10M0 -5v10M7 -5v10" stroke="#0d2433" stroke-width="2"/>
-            </g>
-            <animateMotion id="ballAnim" dur="1.9s" begin="indefinite" fill="freeze" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 .05 .55 .95">
-              <mpath href="#tryPath"/>
-            </animateMotion>
-          </g>
-        </svg>
-        <div class="try-title">
-          <div class="burst">Essai !</div>
-          <div class="sub">Découvrez l'équipe du Kab</div>
-        </div>
-        <button class="btn btn-light btn-sm replay" id="replay">↻ Rejouer</button>
-      </div>
-    </section>
-
-    <section class="section-tight">
-      <div class="container center">
+    <section class="page-hero">
+      <div class="container">
         <span class="eyebrow">L'équipe</span>
-        <h2>3 associés, un même maillot</h2>
+        <h1>3 associés, une même vision</h1>
         <p class="lead">Quentin, Max et Antoine ont fondé le Kab Chazay. Des kinésithérapeutes formés en continu, complémentaires et passionnés de sport. Cliquez sur « Découvrir le parcours » pour voir les formations de chacun.</p>
       </div>
     </section>
 
     <!-- ===== Membres =====
-         Pour chaque kiné : remplacez nom, spécialités, parcours, et la photo/vidéo.
-         Photo : <img src="assets/img/equipe/prenom.jpg" alt="Prénom Nom">
-         Vidéo : <video src="assets/video/prenom.mp4" autoplay muted loop playsinline></video> -->
+         Données dans le tableau TEAM plus bas.
+         Vidéo : déposer un fichier court (5-8 s, sans son) dans assets/video/equipe/
+         puis renseigner video: "assets/video/equipe/prenom.mp4" — la photo sert d'image d'attente. -->
     <section class="section" style="padding-top:0">
       <div class="container team-grid" id="team"></div>
     </section>
@@ -110,7 +53,7 @@
 
     <section class="section dark">
       <div class="container center">
-        <h2>Prêt à reprendre le jeu ?</h2>
+        <h2>Prêt à reprendre le mouvement ?</h2>
         <p class="lead">Réservez directement votre séance avec le kiné de votre choix sur Doctolib, ou contactez le cabinet.</p>
         <div class="btn-row" style="justify-content:center;margin-top:24px">
           <a class="btn btn-rdv" href="contact.html#rdv">Prendre rendez-vous</a>
@@ -167,16 +110,15 @@
 
   (function () {
     var esc = function (s) { var d = document.createElement("div"); d.textContent = s; return d.innerHTML; };
-    var BALL = '<svg class="mini-ball" viewBox="-32 -20 64 40"><ellipse rx="30" ry="18" fill="#f5f4ef" stroke="#0d2433" stroke-width="2"/><path d="M-20 0H20M-7 -5v10M0 -5v10M7 -5v10" stroke="#0d2433" stroke-width="2"/></svg>';
     var SIL = '<svg class="silhouette" viewBox="0 0 200 220" fill="currentColor"><circle cx="100" cy="62" r="42"/><path d="M20 220c0-52 36-86 80-86s80 34 80 86z"/></svg>';
     var html = TEAM.map(function (m, i) {
-      var media = m.video ? '<video src="' + m.video + '" autoplay muted loop playsinline></video>'
+      var media = m.video ? '<video src="' + m.video + '"' + (m.photo ? ' poster="' + m.photo + '"' : '') + ' muted loop playsinline preload="metadata" aria-label="' + esc(m.name) + '"></video>'
         : m.photo ? '<img src="' + m.photo + '" alt="' + esc(m.name) + '">' : SIL;
       var id = "parcours-" + i;
       return '<article class="member reveal d' + (i % 3) + '">' +
         '<div class="member-media' + (m.photo || m.video ? ' has-photo' : '') + '">' + media +
         '<span class="num">' + String(i + 1).padStart(2, "0") + '</span>' +
-        '<div class="mini-try"><span class="mini-line"></span>' + BALL + '<span class="essai-tag">Essai !</span></div></div>' +
+        '</div>' +
         '<div class="member-body"><h3>' + esc(m.name) + '</h3><div class="member-role">' + esc(m.role) + '</div>' +
         '<div class="chips">' + m.chips.map(function (c) { return '<span class="chip">' + esc(c) + "</span>"; }).join("") + "</div>" +
         '<div class="member-actions"><button class="btn btn-sm toggle-parcours" aria-expanded="false" aria-controls="' + id + '">Découvrir le parcours</button>' +
@@ -197,19 +139,18 @@
       });
     });
 
-    // Animation « Essai »
-    var hero = document.getElementById("try-hero");
-    function play() {
-      hero.classList.remove("play");
-      void hero.offsetWidth;
-      hero.classList.add("play");
-      ["ballAnim", "trailAnim"].forEach(function (id) {
-        var a = document.getElementById(id);
-        if (a && a.beginElement) a.beginElement();
-      });
+    // Vidéos : lecture quand la carte est visible (et pas si l'utilisateur limite les animations)
+    var vids = grid.querySelectorAll("video");
+    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (vids.length && !still && "IntersectionObserver" in window) {
+      var vo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { var p = e.target.play(); if (p && p.catch) p.catch(function () {}); }
+          else e.target.pause();
+        });
+      }, { threshold: .4 });
+      vids.forEach(function (v) { vo.observe(v); });
     }
-    document.getElementById("replay").addEventListener("click", play);
-    setTimeout(play, 300);
   })();
   </script>
 </body>

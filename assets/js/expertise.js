@@ -8,7 +8,7 @@
       sub: "Ceinture scapulaire",
       points: { front: [[66, 100], [154, 100]], back: [[66, 102], [154, 102]] },
       patho: ["Tendinopathie de la coiffe des rotateurs", "Conflit sous-acromial", "Capsulite rétractile (épaule gelée)", "Luxation & instabilité", "Post-opératoire : réparation de coiffe, Latarjet, Bankart", "Fracture de l'humérus / de la clavicule"],
-      approach: "Bilan de mobilité et de force, thérapie manuelle, renforcement progressif sur Voltra et retour aux gestes sportifs (lancer, plaquage, natation)."
+      approach: "Bilan de mobilité et de force, thérapie manuelle, renforcement progressif sur Voltra et retour aux gestes sportifs (lancer, contacts, natation)."
     },
     {
       id: "coude", label: "Coude", short: "CO",

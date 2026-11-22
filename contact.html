@@ -20,7 +20,7 @@
       <div class="container">
         <span class="eyebrow">Contact &amp; horaires</span>
         <h1>Prendre rendez-vous</h1>
-        <p class="lead">Réservez en ligne sur Doctolib, appelez le cabinet, ou envoyez-nous une demande : nous vous recontactons rapidement.</p>
+        <p class="lead">Réservez en ligne sur Doctolib ou appelez directement le cabinet.</p>
       </div>
     </section>
 
@@ -40,43 +40,6 @@
             </a>
           </div>
 
-          <h3 style="text-transform:uppercase">Demande de rendez-vous</h3>
-          <p class="muted">Remplissez ce formulaire : le cabinet vous rappelle pour fixer le créneau.</p>
-          <form class="form" id="rdv-form" novalidate>
-            <div class="row">
-              <label>Nom et prénom *<input name="nom" required autocomplete="name"></label>
-              <label>Téléphone *<input name="tel" type="tel" required autocomplete="tel"></label>
-            </div>
-            <div class="row">
-              <label>E-mail<input name="email" type="email" autocomplete="email"></label>
-              <label>Motif *
-                <select name="motif" required>
-                  <option value="">Choisir…</option>
-                  <option>Première séance (avec ordonnance)</option>
-                  <option>Rééducation post-opératoire</option>
-                  <option>Blessure sportive</option>
-                  <option>Douleurs (dos, cou, articulations…)</option>
-                  <option>Balnéothérapie / cours collectifs</option>
-                  <option>Location Game Ready</option>
-                  <option>Autre demande</option>
-                </select>
-              </label>
-            </div>
-            <div>
-              <span style="font-weight:600;font-size:.9rem;display:block;margin-bottom:8px">Créneaux préférés</span>
-              <div class="slots">
-                <label><input type="checkbox" name="creneau" value="Matin"><span>Matin</span></label>
-                <label><input type="checkbox" name="creneau" value="Midi"><span>Midi</span></label>
-                <label><input type="checkbox" name="creneau" value="Après-midi"><span>Après-midi</span></label>
-                <label><input type="checkbox" name="creneau" value="Soir"><span>Soir</span></label>
-                <label><input type="checkbox" name="creneau" value="Samedi"><span>Samedi</span></label>
-              </div>
-            </div>
-            <label>Message<textarea name="message" placeholder="Pathologie, date d'opération, disponibilités…"></textarea></label>
-            <p class="muted" style="font-size:.8rem;margin:0">Merci de ne pas transmettre de documents médicaux par ce formulaire : apportez-les lors de votre première séance.</p>
-            <div class="form-msg" id="form-msg" role="status"></div>
-            <div><button class="btn btn-rdv" type="submit">Envoyer ma demande</button></div>
-          </form>
         </div>
 
         <div class="grid" style="gap:28px">
@@ -145,35 +108,6 @@
       badge.style.display = "none";
     }
 
-    // Formulaire de demande → e-mail pré-rempli
-    var form = document.getElementById("rdv-form");
-    var msg = document.getElementById("form-msg");
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var d = new FormData(form);
-      var missing = ["nom", "tel", "motif"].filter(function (k) { return !String(d.get(k) || "").trim(); });
-      form.querySelectorAll("[required]").forEach(function (f) { f.style.borderColor = missing.indexOf(f.name) > -1 ? "#e5531f" : ""; });
-      if (missing.length) {
-        msg.style.background = "#fde8e1"; msg.style.color = "#c2410c";
-        msg.textContent = "Merci de renseigner votre nom, votre téléphone et le motif.";
-        msg.classList.add("show");
-        return;
-      }
-      var body = [
-        "Nom : " + d.get("nom"),
-        "Téléphone : " + d.get("tel"),
-        "E-mail : " + (d.get("email") || "-"),
-        "Motif : " + d.get("motif"),
-        "Créneaux préférés : " + (d.getAll("creneau").join(", ") || "-"),
-        "",
-        "Message :",
-        d.get("message") || "-"
-      ].join("\n");
-      window.location.href = "mailto:" + K.email + "?subject=" + encodeURIComponent("Demande de rendez-vous — " + d.get("nom")) + "&body=" + encodeURIComponent(body);
-      msg.style.background = ""; msg.style.color = "";
-      msg.textContent = "Votre messagerie s'ouvre avec la demande pré-remplie : il ne reste qu'à l'envoyer. Vous pouvez aussi nous appeler au " + K.phone + ".";
-      msg.classList.add("show");
-    });
   })();
   </script>
 </body>
