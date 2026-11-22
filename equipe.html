@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L'équipe — Le Kab, kinésithérapie du sport</title>
+  <meta name="description" content="Découvrez l'équipe de kinésithérapeutes du Kab à Chazay-d'Azergues : parcours, formations et spécialités.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="equipe">
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <!-- ===== Animation « Essai ! » =====
+         Pour utiliser une vraie vidéo à la place, remplacez le <svg> par :
+         <video src="assets/video/essai.mp4" autoplay muted playsinline></video> -->
+    <section class="try-hero" id="try-hero">
+      <div class="try-stage">
+        <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1c27"/><stop offset="1" stop-color="#143447"/></linearGradient>
+            <radialGradient id="light" cx=".5" cy="0" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect width="1200" height="500" fill="url(#sky)"/>
+          <ellipse cx="200" cy="0" rx="300" ry="220" fill="url(#light)"/>
+          <ellipse cx="1000" cy="0" rx="300" ry="220" fill="url(#light)"/>
+          <!-- tribunes -->
+          <g fill="#0f2938"><path d="M0 230 L1200 230 L1200 270 L0 270z"/></g>
+          <g fill="#ffffff" opacity=".06">
+            <circle cx="80" cy="245" r="5"/><circle cx="140" cy="250" r="5"/><circle cx="230" cy="244" r="5"/><circle cx="320" cy="252" r="5"/><circle cx="410" cy="246" r="5"/><circle cx="520" cy="250" r="5"/><circle cx="640" cy="244" r="5"/><circle cx="760" cy="251" r="5"/><circle cx="880" cy="246" r="5"/><circle cx="990" cy="250" r="5"/><circle cx="1110" cy="245" r="5"/>
+          </g>
+          <!-- terrain -->
+          <path d="M0 270 H1200 V500 H0z" fill="#0f8f6a"/>
+          <g fill="#13a57b"><path d="M0 270h120l-40 230H0z"/><path d="M240 270h120l-20 230H190z"/><path d="M480 270h120l0 230H480z"/><path d="M720 270h120l20 230H730z"/></g>
+          <path d="M900 270 H1200 V500 H930z" fill="#0b7657"/>
+          <!-- ligne d'essai -->
+          <path d="M900 270 L930 500" stroke="#fff" stroke-width="5"/>
+          <path d="M1130 270 L1170 500" stroke="#fff" stroke-width="3" opacity=".6"/>
+          <!-- poteaux -->
+          <g stroke="#fff" stroke-width="7" stroke-linecap="round"><path d="M985 330 V60"/><path d="M1085 320 V50"/><path d="M985 200 H1085"/></g>
+          <text x="1035" y="300" text-anchor="middle" fill="#fff" opacity=".5" font-family="Barlow Condensed, sans-serif" font-weight="800" font-size="40">LE KAB</text>
+          <!-- trajectoire -->
+          <path id="tryPath" d="M120 430 C 380 120, 760 80, 1010 400" fill="none"/>
+          <path class="trail" d="M120 430 C 380 120, 760 80, 1010 400" fill="none" stroke="#15b58a" stroke-width="4" stroke-dasharray="4 12" stroke-linecap="round" opacity=".8">
+            <animate id="trailAnim" attributeName="stroke-dashoffset" from="1300" to="0" dur="1.9s" begin="indefinite" fill="freeze"/>
+          </path>
+          <circle cx="1010" cy="400" r="10" fill="#15b58a" opacity="0">
+            <animate attributeName="r" values="10;170" dur=".9s" begin="ballAnim.end" fill="freeze"/>
+            <animate attributeName="opacity" values=".9;0" dur=".9s" begin="ballAnim.end" fill="freeze"/>
+          </circle>
+          <!-- ballon -->
+          <g>
+            <g>
+              <ellipse rx="30" ry="18" fill="#f5f4ef" stroke="#0d2433" stroke-width="2"/>
+              <path d="M-20 0 H20" stroke="#0d2433" stroke-width="2.5"/>
+              <path d="M-7 -5v10M0 -5v10M7 -5v10" stroke="#0d2433" stroke-width="2"/>
+            </g>
+            <animateMotion id="ballAnim" dur="1.9s" begin="indefinite" fill="freeze" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 .05 .55 .95">
+              <mpath href="#tryPath"/>
+            </animateMotion>
+          </g>
+        </svg>
+        <div class="try-title">
+          <div class="burst">Essai !</div>
+          <div class="sub">Découvrez l'équipe du Kab</div>
+        </div>
+        <button class="btn btn-light btn-sm replay" id="replay">↻ Rejouer</button>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container center">
+        <span class="eyebrow">L'équipe</span>
+        <h2>Une équipe, un même maillot</h2>
+        <p class="lead">Des kinésithérapeutes formés en continu, complémentaires et passionnés de sport. Cliquez sur « Découvrir le parcours » pour voir les formations de chacun.</p>
+      </div>
+    </section>
+
+    <!-- ===== Membres =====
+         Pour chaque kiné : remplacez nom, spécialités, parcours, et la photo/vidéo.
+         Photo : <img src="assets/img/equipe/prenom.jpg" alt="Prénom Nom">
+         Vidéo : <video src="assets/video/prenom.mp4" autoplay muted loop playsinline></video> -->
+    <section class="section" style="padding-top:0">
+      <div class="container team-grid" id="team"></div>
+    </section>
+
+    <section class="section dark">
+      <div class="container center">
+        <h2>Prêt à reprendre le jeu ?</h2>
+        <p class="lead">Réservez directement votre séance avec le kiné de votre choix sur Doctolib, ou contactez le cabinet.</p>
+        <div class="btn-row" style="justify-content:center;margin-top:24px">
+          <a class="btn btn-rdv" href="contact.html#rdv">Prendre rendez-vous</a>
+          <a class="btn btn-ghost" href="expertise.html">Nos expertises</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+  /* ====== Données de l'équipe (EXEMPLES À REMPLACER) ====== */
+  var TEAM = [
+    {
+      name: "Prénom Nom", role: "Kinésithérapeute du sport · Co-fondateur",
+      photo: "", video: "", doctolib: "",
+      chips: ["Genou / LCA", "Retour au sport", "Dry needling"],
+      parcours: [
+        ["20XX", "Diplôme d'État de masseur-kinésithérapeute", "IFMK — à compléter"],
+        ["20XX", "Formation en kinésithérapie du sport", "Organisme — à compléter"],
+        ["20XX", "Dry needling", "Organisme — à compléter"],
+        ["20XX", "Rééducation du LCA & critères de retour au sport", "Organisme — à compléter"]
+      ]
+    },
+    {
+      name: "Prénom Nom", role: "Kinésithérapeute · Thérapie manuelle",
+      photo: "", video: "", doctolib: "",
+      chips: ["Rachis", "Thérapie manuelle", "Épaule"],
+      parcours: [
+        ["20XX", "Diplôme d'État de masseur-kinésithérapeute", "IFMK — à compléter"],
+        ["20XX", "Thérapie manuelle orthopédique", "Organisme — à compléter"],
+        ["20XX", "Rééducation de l'épaule", "Organisme — à compléter"]
+      ]
+    },
+    {
+      name: "Prénom Nom", role: "Kinésithérapeute · Balnéothérapie",
+      photo: "", video: "", doctolib: "",
+      chips: ["Post-opératoire", "Balnéo", "BFR"],
+      parcours: [
+        ["20XX", "Diplôme d'État de masseur-kinésithérapeute", "IFMK — à compléter"],
+        ["20XX", "Blood Flow Restriction (BFR)", "Organisme — à compléter"],
+        ["20XX", "Rééducation en balnéothérapie", "Organisme — à compléter"]
+      ]
+    }
+  ];
+
+  (function () {
+    var esc = function (s) { var d = document.createElement("div"); d.textContent = s; return d.innerHTML; };
+    var BALL = '<svg class="mini-ball" viewBox="-32 -20 64 40"><ellipse rx="30" ry="18" fill="#f5f4ef" stroke="#0d2433" stroke-width="2"/><path d="M-20 0H20M-7 -5v10M0 -5v10M7 -5v10" stroke="#0d2433" stroke-width="2"/></svg>';
+    var SIL = '<svg class="silhouette" viewBox="0 0 200 220" fill="currentColor"><circle cx="100" cy="62" r="42"/><path d="M20 220c0-52 36-86 80-86s80 34 80 86z"/></svg>';
+    var html = TEAM.map(function (m, i) {
+      var media = m.video ? '<video src="' + m.video + '" autoplay muted loop playsinline></video>'
+        : m.photo ? '<img src="' + m.photo + '" alt="' + esc(m.name) + '">' : SIL;
+      var id = "parcours-" + i;
+      return '<article class="member reveal d' + (i % 3) + '">' +
+        '<div class="member-media">' + media +
+        '<span class="num">' + String(i + 1).padStart(2, "0") + '</span>' +
+        '<div class="mini-try"><span class="mini-line"></span>' + BALL + '<span class="essai-tag">Essai !</span></div></div>' +
+        '<div class="member-body"><h3>' + esc(m.name) + '</h3><div class="member-role">' + esc(m.role) + '</div>' +
+        '<div class="chips">' + m.chips.map(function (c) { return '<span class="chip">' + esc(c) + "</span>"; }).join("") + "</div>" +
+        '<div class="member-actions"><button class="btn btn-sm toggle-parcours" aria-expanded="false" aria-controls="' + id + '">Découvrir le parcours</button>' +
+        '<a class="btn btn-sm btn-rdv" target="_blank" rel="noopener" href="' + (m.doctolib || window.KAB.doctolib) + '">RDV Doctolib</a></div></div>' +
+        '<div class="parcours" id="' + id + '"><div><ol class="timeline">' +
+        m.parcours.map(function (p) { return '<li><div class="yr">' + esc(p[0]) + '</div><div class="t">' + esc(p[1]) + '</div><div class="s">' + esc(p[2]) + "</div></li>"; }).join("") +
+        "</ol></div></div></article>";
+    }).join("");
+    var grid = document.getElementById("team");
+    grid.innerHTML = html;
+    grid.querySelectorAll(".member").forEach(function (el) {
+      requestAnimationFrame(function () { el.classList.add("in"); });
+      var b = el.querySelector(".toggle-parcours");
+      b.addEventListener("click", function () {
+        var open = el.classList.toggle("open");
+        b.setAttribute("aria-expanded", open);
+        b.textContent = open ? "Masquer le parcours" : "Découvrir le parcours";
+      });
+    });
+
+    // Animation « Essai »
+    var hero = document.getElementById("try-hero");
+    function play() {
+      hero.classList.remove("play");
+      void hero.offsetWidth;
+      hero.classList.add("play");
+      ["ballAnim", "trailAnim"].forEach(function (id) {
+        var a = document.getElementById(id);
+        if (a && a.beginElement) a.beginElement();
+      });
+    }
+    document.getElementById("replay").addEventListener("click", play);
+    setTimeout(play, 300);
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le cabinet & l'équipement — Le Kab, kinésithérapie du sport</title>
+  <meta name="description" content="Visitez le cabinet Le Kab : accueil, salle de soin, balnéothérapie et plateau technique (Voltra, Mad-Up BFR, EMG, Game Ready, Normatec…).">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="cabinet">
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero dark">
+      <div class="container">
+        <span class="eyebrow">Le cabinet &amp; l'équipement</span>
+        <h1>Bienvenue au Kab</h1>
+        <p class="lead">Faites défiler pour survoler le cabinet, entrer par la porte et visiter chaque salle. Passez la souris (ou touchez) les points « + » pour découvrir chaque espace et chaque machine.</p>
+        <div class="mode-switch" role="group" aria-label="Mode de visite">
+          <button type="button" data-mode="tour" aria-pressed="true">Visite immersive</button>
+          <button type="button" data-mode="gear" aria-pressed="false">Matériel un à un</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="mode-tour">
+      <!-- Survol aérien → porte d'entrée -->
+      <section class="flyover" id="flyover" aria-label="Survol du cabinet">
+        <div class="flyover-sticky">
+          <div class="flyover-world"></div>
+          <div class="flyover-inside" aria-hidden="true"></div>
+          <div class="flyover-door" aria-hidden="true">
+            <div class="leaf l"><span class="glass"></span></div>
+            <div class="leaf r"><span class="glass"></span></div>
+          </div>
+          <a class="btn btn-light btn-sm flyover-skip" href="#accueil">Passer l'intro ↓</a>
+          <div class="flyover-caption"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg><span></span></div>
+        </div>
+      </section>
+
+      <nav class="tour-nav" aria-label="Salles du cabinet">
+        <ol class="container" id="tour-nav-list"></ol>
+      </nav>
+
+      <div id="tour"></div>
+    </div>
+
+    <section class="section" id="mode-gear" hidden>
+      <div class="container">
+        <span class="eyebrow">Matériel un à un</span>
+        <h2>Notre équipement</h2>
+        <p class="lead" style="margin-bottom:28px">Cliquez sur une machine pour ouvrir sa fiche interactive.</p>
+        <div class="gear-filter" role="group" aria-label="Filtrer">
+          <button type="button" data-f="all" aria-pressed="true">Tout</button>
+          <button type="button" data-f="plateau" aria-pressed="false">Plateau technique</button>
+          <button type="button" data-f="recup" aria-pressed="false">Récupération</button>
+        </div>
+        <div class="gear-grid" id="gear-grid"></div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="container center">
+        <h2>Envie de voir le cabinet en vrai ?</h2>
+        <p class="lead">Prenez rendez-vous : nous vous ferons découvrir les lieux lors de votre première séance.</p>
+        <div class="btn-row" style="justify-content:center;margin-top:24px">
+          <a class="btn btn-rdv" href="contact.html#rdv">Prendre rendez-vous</a>
+          <a class="btn btn-ghost" data-k="maps-dir" href="#" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cabinet-data.js"></script>
+  <script src="assets/js/cabinet.js"></script>
+</body>
+</html>

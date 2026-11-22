@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domaines d'expertise — Le Kab, kinésithérapie du sport</title>
+  <meta name="description" content="Épaule, genou, cheville, dos, hanche… Découvrez les pathologies prises en charge au cabinet Le Kab à Chazay-d'Azergues.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="expertise">
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Domaines d'expertise</span>
+        <h1>Où avez-vous mal&nbsp;?</h1>
+        <p class="lead">Cliquez sur une articulation ou une zone du corps pour découvrir les pathologies que nous prenons en charge et notre approche.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container body-explorer">
+        <div class="body-stage">
+          <div class="view-switch" role="group" aria-label="Vue du corps">
+            <button type="button" data-view="front" aria-pressed="true">Face</button>
+            <button type="button" data-view="back" aria-pressed="false">Dos</button>
+          </div>
+          <svg class="body-svg" id="body-svg" viewBox="0 0 220 470" role="img" aria-label="Silhouette interactive : choisissez une zone du corps">
+            <g id="body-shape">
+              <!-- jambes -->
+              <path class="limb-o" d="M88 250 L84 345 L82 432" stroke-width="31"/>
+              <path class="limb-o" d="M132 250 L136 345 L138 432" stroke-width="31"/>
+              <path class="limb" d="M88 250 L84 345 L82 432" stroke-width="28"/>
+              <path class="limb" d="M132 250 L136 345 L138 432" stroke-width="28"/>
+              <ellipse class="skin" cx="76" cy="448" rx="18" ry="9"/>
+              <ellipse class="skin" cx="144" cy="448" rx="18" ry="9"/>
+              <!-- bras -->
+              <path class="limb-o" d="M66 102 L50 182 L42 250" stroke-width="23"/>
+              <path class="limb-o" d="M154 102 L170 182 L178 250" stroke-width="23"/>
+              <path class="limb" d="M66 102 L50 182 L42 250" stroke-width="20"/>
+              <path class="limb" d="M154 102 L170 182 L178 250" stroke-width="20"/>
+              <ellipse class="skin" cx="40" cy="268" rx="11" ry="16"/>
+              <ellipse class="skin" cx="180" cy="268" rx="11" ry="16"/>
+              <!-- tronc -->
+              <path class="skin" d="M70 88 Q110 78 150 88 Q166 94 164 112 L152 170 Q146 200 150 228 Q154 252 140 262 L80 262 Q66 252 70 228 Q74 200 68 170 L56 112 Q54 94 70 88z"/>
+              <!-- cou + tête -->
+              <rect class="skin" x="98" y="62" width="24" height="28" rx="8"/>
+              <ellipse class="skin" cx="110" cy="40" rx="24" ry="29"/>
+              <!-- détails anatomiques (face) -->
+              <g class="muscle front-only">
+                <path d="M110 100 V160"/><path d="M84 108 Q98 124 110 118 Q122 124 136 108"/>
+                <path d="M96 170 H124 M96 190 H124 M98 210 H122"/>
+                <path d="M78 336 Q84 348 90 336"/><path d="M130 336 Q136 348 142 336"/>
+              </g>
+              <!-- détails anatomiques (dos) -->
+              <g class="muscle back-only" style="display:none">
+                <path d="M110 92 V250" stroke-dasharray="3 5"/>
+                <path d="M80 110 Q90 140 104 130 M140 110 Q130 140 116 130"/>
+                <path d="M86 236 Q110 256 134 236"/>
+              </g>
+            </g>
+            <g id="zones"></g>
+          </svg>
+          <p class="muted center" style="font-size:.85rem;margin:6px 0 0">Touchez un point pour en savoir plus</p>
+        </div>
+
+        <div>
+          <div class="zone-pills" id="zone-pills" role="group" aria-label="Zones du corps"></div>
+          <div class="zone-panel" aria-live="polite">
+            <div class="zone-panel-head">
+              <div class="zi" id="zp-ic">K</div>
+              <div><h2 id="zp-title"></h2><p id="zp-sub"></p></div>
+            </div>
+            <div class="zone-panel-body" id="zp-body"></div>
+          </div>
+          <div class="disclaimer">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:28px;height:28px;color:var(--kab-dark)"><circle cx="12" cy="12" r="10"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+            <p><strong>Liste non exhaustive.</strong> N'hésitez pas à contacter le cabinet pour plus d'informations sur votre situation.</p>
+            <a class="btn btn-sm btn-rdv" href="contact.html#rdv">Contacter le cabinet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="container">
+        <div class="center" style="margin-bottom:40px">
+          <span class="eyebrow">Et aussi</span>
+          <h2>Nos prises en charge transversales</h2>
+        </div>
+        <div class="grid grid-4">
+          <div class="philo-item" style="display:block"><h3>Kiné du sport</h3><p>Blessures musculaires, reprise de course, tests de retour au jeu, prévention.</p></div>
+          <div class="philo-item" style="display:block"><h3>Post-opératoire</h3><p>LCA, prothèses, épaule, rachis : rééducation en salle et en balnéothérapie.</p></div>
+          <div class="philo-item" style="display:block"><h3>Douleurs chroniques</h3><p>Éducation à la douleur, exercice thérapeutique et thérapie manuelle.</p></div>
+          <div class="philo-item" style="display:block"><h3>Préparation physique</h3><p>Renforcement, pliométrie et réathlétisation sur notre plateau technique.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/expertise.js"></script>
+</body>
+</html>

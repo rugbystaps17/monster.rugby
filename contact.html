@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact & horaires — Le Kab, kinésithérapie du sport</title>
+  <meta name="description" content="Prendre rendez-vous au cabinet Le Kab : Doctolib, téléphone, horaires, accès et parking — 7 rue Marius Berliet, 69380 Chazay-d'Azergues.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact">
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Contact &amp; horaires</span>
+        <h1>Prendre rendez-vous</h1>
+        <p class="lead">Réservez en ligne sur Doctolib, appelez le cabinet, ou envoyez-nous une demande : nous vous recontactons rapidement.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0" id="rdv">
+      <div class="container contact-grid">
+        <div class="card">
+          <div class="rdv-options">
+            <a class="rdv-opt doc" data-k="doctolib" href="#" target="_blank" rel="noopener">
+              <small>Réservation en ligne 24h/24</small>
+              <span class="big">Doctolib →</span>
+              <small>Choisissez votre kiné et votre créneau</small>
+            </a>
+            <a class="rdv-opt tel" href="#" data-tel>
+              <small>Par téléphone</small>
+              <span class="big" data-k="phone"></span>
+              <small>Aux horaires d'ouverture</small>
+            </a>
+          </div>
+
+          <h3 style="text-transform:uppercase">Demande de rendez-vous</h3>
+          <p class="muted">Remplissez ce formulaire : le cabinet vous rappelle pour fixer le créneau.</p>
+          <form class="form" id="rdv-form" novalidate>
+            <div class="row">
+              <label>Nom et prénom *<input name="nom" required autocomplete="name"></label>
+              <label>Téléphone *<input name="tel" type="tel" required autocomplete="tel"></label>
+            </div>
+            <div class="row">
+              <label>E-mail<input name="email" type="email" autocomplete="email"></label>
+              <label>Motif *
+                <select name="motif" required>
+                  <option value="">Choisir…</option>
+                  <option>Première séance (avec ordonnance)</option>
+                  <option>Rééducation post-opératoire</option>
+                  <option>Blessure sportive</option>
+                  <option>Douleurs (dos, cou, articulations…)</option>
+                  <option>Balnéothérapie / cours collectifs</option>
+                  <option>Location Game Ready</option>
+                  <option>Autre demande</option>
+                </select>
+              </label>
+            </div>
+            <div>
+              <span style="font-weight:600;font-size:.9rem;display:block;margin-bottom:8px">Créneaux préférés</span>
+              <div class="slots">
+                <label><input type="checkbox" name="creneau" value="Matin"><span>Matin</span></label>
+                <label><input type="checkbox" name="creneau" value="Midi"><span>Midi</span></label>
+                <label><input type="checkbox" name="creneau" value="Après-midi"><span>Après-midi</span></label>
+                <label><input type="checkbox" name="creneau" value="Soir"><span>Soir</span></label>
+                <label><input type="checkbox" name="creneau" value="Samedi"><span>Samedi</span></label>
+              </div>
+            </div>
+            <label>Message<textarea name="message" placeholder="Pathologie, date d'opération, disponibilités…"></textarea></label>
+            <p class="muted" style="font-size:.8rem;margin:0">Merci de ne pas transmettre de documents médicaux par ce formulaire : apportez-les lors de votre première séance.</p>
+            <div class="form-msg" id="form-msg" role="status"></div>
+            <div><button class="btn btn-rdv" type="submit">Envoyer ma demande</button></div>
+          </form>
+        </div>
+
+        <div class="grid" style="gap:28px">
+          <div class="card">
+            <div class="open-now" id="open-now"><i></i><span></span></div>
+            <h3 style="text-transform:uppercase">Horaires</h3>
+            <table class="hours" id="hours"></table>
+          </div>
+          <a class="insta-card" data-k="instagram" href="#" target="_blank" rel="noopener">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            <div><strong>Suivez le Kab</strong>Coulisses, conseils et exercices sur Instagram</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#ecebe4">
+      <div class="container location">
+        <div>
+          <span class="eyebrow">Accès</span>
+          <h2>Venir au cabinet</h2>
+          <ul class="access-list" style="margin:24px 0 32px">
+            <li><span class="ii"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><strong>Adresse</strong><span data-k="address"></span></div></li>
+            <li><span class="ii"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg></span><div><strong>Stationnement</strong>Places de parking devant le centre de kinésithérapie et stationnement dans la rue.</div></li>
+            <li><span class="ii"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="4.5" r="2"/><path d="M12 7v6h5l2 6M12 13a5 5 0 1 0 4 8"/></svg></span><div><strong>Accessibilité</strong><!-- À COMPLÉTER : accès PMR, plain-pied, ascenseur… -->Cabinet accessible : n'hésitez pas à nous prévenir de vos besoins particuliers lors de la prise de rendez-vous.</div></li>
+            <li><span class="ii"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><strong>Téléphone</strong><a class="link" data-k="phone" href="#"></a></div></li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-kab" data-k="maps-dir" href="#" target="_blank" rel="noopener">Itinéraire Google Maps</a>
+            <a class="btn btn-ghost" href="cabinet.html">Visite virtuelle</a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe data-k="maps-embed" title="Carte : localisation du cabinet Le Kab" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+  (function () {
+    var K = window.KAB;
+    document.querySelector("[data-tel]").href = "tel:" + K.phoneHref;
+
+    // Horaires + « ouvert maintenant »
+    var days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+    var now = new Date(), today = days[now.getDay()];
+    document.getElementById("hours").innerHTML = K.hours.map(function (h) {
+      return '<tr class="' + (h[0] === today ? "today" : "") + '"><td>' + h[0] + "</td><td>" + h[1] + "</td></tr>";
+    }).join("");
+    var row = K.hours.filter(function (h) { return h[0] === today; })[0];
+    var badge = document.getElementById("open-now");
+    var m = row && row[1].match(/(\d{1,2})h(\d{2})?\s*[–-]\s*(\d{1,2})h(\d{2})?/);
+    if (m) {
+      var mins = now.getHours() * 60 + now.getMinutes();
+      var o = +m[1] * 60 + +(m[2] || 0), c = +m[3] * 60 + +(m[4] || 0);
+      var open = mins >= o && mins < c;
+      badge.querySelector("span").textContent = open ? "Ouvert actuellement" : "Fermé actuellement";
+      if (!open) { badge.style.background = "#fde8e1"; badge.style.color = "#c2410c"; }
+    } else {
+      badge.style.display = "none";
+    }
+
+    // Formulaire de demande → e-mail pré-rempli
+    var form = document.getElementById("rdv-form");
+    var msg = document.getElementById("form-msg");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var d = new FormData(form);
+      var missing = ["nom", "tel", "motif"].filter(function (k) { return !String(d.get(k) || "").trim(); });
+      form.querySelectorAll("[required]").forEach(function (f) { f.style.borderColor = missing.indexOf(f.name) > -1 ? "#e5531f" : ""; });
+      if (missing.length) {
+        msg.style.background = "#fde8e1"; msg.style.color = "#c2410c";
+        msg.textContent = "Merci de renseigner votre nom, votre téléphone et le motif.";
+        msg.classList.add("show");
+        return;
+      }
+      var body = [
+        "Nom : " + d.get("nom"),
+        "Téléphone : " + d.get("tel"),
+        "E-mail : " + (d.get("email") || "-"),
+        "Motif : " + d.get("motif"),
+        "Créneaux préférés : " + (d.getAll("creneau").join(", ") || "-"),
+        "",
+        "Message :",
+        d.get("message") || "-"
+      ].join("\n");
+      window.location.href = "mailto:" + K.email + "?subject=" + encodeURIComponent("Demande de rendez-vous — " + d.get("nom")) + "&body=" + encodeURIComponent(body);
+      msg.style.background = ""; msg.style.color = "";
+      msg.textContent = "Votre messagerie s'ouvre avec la demande pré-remplie : il ne reste qu'à l'envoyer. Vous pouvez aussi nous appeler au " + K.phone + ".";
+      msg.classList.add("show");
+    });
+  })();
+  </script>
+</body>
+</html>
