@@ -119,11 +119,11 @@
       spots: [[67, 40, "Capteur sans fil", "Transmet le signal électrique du muscle à la tablette du kiné."], [61, 58, "Électrodes adhésives", "Collées sur la peau, juste au-dessus du muscle étudié."], [30, 55, "Muscle ciblé", "Ici le biceps ; au genou, on suit surtout le quadriceps."]]
     },
     madup: {
-      name: "Mad-Up BFR", sub: "Blood Flow Restriction", room: "plateau",
+      name: "Mad-Up Physio", sub: "Blood Flow Restriction (BFR)", room: "plateau", photo: IMG + "madup.jpg", contain: true,
       text: "Restriction partielle du flux sanguin pour gagner en force et en masse musculaire avec des charges très légères.",
-      bullets: ["Limite la fonte musculaire en post-opératoire", "Renforcement quand les charges lourdes sont contre-indiquées", "Pression personnalisée et contrôlée automatiquement"],
+      bullets: ["Limite la fonte musculaire en post-opératoire", "Renforcement quand les charges lourdes sont contre-indiquées", "Pression personnalisée et ajustée automatiquement pendant l'exercice"],
       note: "L'utilisation du BFR est validée lors du bilan : certaines contre-indications existent.",
-      spots: [[40, 36, "Brassard", "Gonflé à une pression calculée pour chaque patient."], [84, 70, "Boîtier", "Régule et contrôle la pression en continu."]]
+      spots: [[29, 58, "Écran tactile", "Affiche en temps réel la pression appliquée et le déroulé de l'exercice."], [48, 60, "Sortie d'air", "Relie l'appareil aux brassards par des tubes."], [72, 82, "Tubes vers les brassards", "Les brassards se placent en haut du bras ou de la cuisse."], [45, 14, "Poignée", "Appareil transportable d'un poste à l'autre du plateau."]]
     },
     boxes: {
       name: "Box jump & plyo box", sub: "Pliométrie", room: "plateau",
@@ -174,17 +174,17 @@
       spots: [[50, 40, "Assise réglable", "Position adaptée à la longueur de jambe de chaque patient."]]
     },
     gameready: {
-      name: "Game Ready", sub: "Cryothérapie & compression", room: "recup", photo: IMG + "gameready.jpg",
+      name: "Game Ready", sub: "Cryothérapie & compression", room: "recup", photo: IMG + "gameready.jpg", contain: true,
       text: "Associe le froid et la compression pneumatique pour diminuer la douleur et l'œdème.",
       bullets: ["Indispensable après une chirurgie ou une entorse", "Réduit le gonflement et soulage la douleur", "Location possible en post-opératoire pour accélérer la récupération à domicile"],
       note: "Renseignez-vous au cabinet pour la location de la Game Ready.",
-      spots: [[58, 25, "Unité de contrôle", "Règle la température et le niveau de compression."], [45, 70, "Manchons", "Adaptés à chaque articulation : genou, cheville, épaule…"]]
+      spots: [[32, 32, "Réservoir d'eau glacée", "L'eau froide circule en continu jusqu'au manchon."], [75, 26, "Écran & molette", "Réglage de la température, de la pression et de la durée."], [55, 11, "Poignée", "Unité portable : idéale pour la location à domicile."], [27, 80, "Manchon", "Froid et compression en même temps ; modèles genou, cheville, épaule, dos…"]]
     },
     normatec: {
-      name: "Normatec", sub: "Pressothérapie", room: "recup",
+      name: "Normatec", sub: "Pressothérapie", room: "recup", photo: IMG + "normatec.jpg", contain: true,
       text: "Pressothérapie séquentielle qui améliore le retour veineux et accélère la récupération.",
       bullets: ["Meilleure récupération après l'effort", "Sensation de jambes légères", "Massage par compression progressive des pieds vers les cuisses"],
-      spots: [[16, 75, "Boîtier", "Programme l'intensité et la durée de la séance."], [62, 50, "Bottes", "Plusieurs chambres se gonflent l'une après l'autre."]]
+      spots: [[50, 9, "Télécommande", "Réglage de l'intensité et de la durée de la séance."], [22, 50, "Bottes à chambres", "Plusieurs chambres se gonflent l'une après l'autre, des pieds vers les cuisses."], [50, 40, "Tubes d'air", "Relient la télécommande aux deux bottes."]]
     }
   };
 
@@ -207,7 +207,7 @@
       intro: "6 box individuels de 10 à 17 m², et des tables de soin sur le plateau.",
       hotspots: [
         { x: 79, y: 58, title: "Bilan kiné", text: "Évaluation complète en box individuel : douleur, mobilité, force, tests fonctionnels. Il sert à fixer des objectifs et à construire votre programme." },
-        { x: 13, y: 60, title: "Dry needling", text: "Technique utilisant une aiguille fine pour traiter les points gâchettes musculaires et diminuer les douleurs et tensions." },
+        { x: 13, y: 60, img: "assets/img/cabinet/dry-needling.jpg", title: "Dry needling", text: "Technique utilisant une aiguille fine pour traiter les points gâchettes musculaires et diminuer les douleurs et tensions." },
         { x: 32, y: 66, title: "Massage", text: "Massage thérapeutique et de récupération : détente musculaire, circulation, diminution des douleurs." },
         { x: 56, y: 37, title: "Thérapie manuelle", text: "Mobilisations et manipulations articulaires pour restaurer la mobilité et soulager la douleur, toujours associées à l'exercice." }
       ]

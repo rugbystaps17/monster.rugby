@@ -171,7 +171,7 @@
   });
 
   function bubbleHTML(h) {
-    return "<h4>" + esc(h.title) + "</h4><p>" + esc(h.text) + "</p>" +
+    return (h.img ? '<img class="bubble-img" src="' + h.img + '" alt="">' : "") + "<h4>" + esc(h.title) + "</h4><p>" + esc(h.text) + "</p>" +
       (h.tags ? '<div class="tags">' + h.tags.map(function (t) { return '<span class="chip">' + esc(t) + "</span>"; }).join("") + "</div>" : "") +
       (h.link ? '<div class="more"><a class="btn btn-sm btn-rdv" href="' + h.link[0] + '">' + esc(h.link[1]) + "</a></div>" : "") +
       (h.eq ? '<div class="more"><button class="btn btn-sm btn-kab" data-product="' + h.eq + '">Fiche détaillée →</button></div>' : "");

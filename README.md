@@ -36,7 +36,7 @@ Sur toutes les pages : logo / nom, menu, bouton « Prendre rendez-vous » dans l
   positions `x` / `y` (en %) des points d'intérêt dans `assets/js/cabinet-data.js`.
 - `assets/img/materiel/` : Voltra et EMG (photos produit), et des recadrages du plateau pour les autres machines.
   Vérifiez que vous avez le droit d'utiliser les photos produit des fabricants (ou utilisez vos propres photos).
-- Mad-Up BFR, plyo box, reverse hyper et Normatec n'ont pas encore de photo : ils utilisent une illustration
+- Plyo box et reverse hyper n'ont pas encore de photo : ils utilisent une illustration
   (ajouter `photo: IMG + "fichier.jpg"` dans `cabinet-data.js` suffit pour basculer sur une photo).
 - Survol aérien : c'est un plan dessiné d'après la disposition réelle (rue en courbe, parking, entrée).
   Les captures Google Maps / Street View ne sont pas utilisées : elles ne peuvent pas être publiées sur un site.

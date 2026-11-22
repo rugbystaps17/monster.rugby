@@ -610,3 +610,5 @@ p { margin: 0 0 1em; }
 .assist { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 14px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .assist-av { width: 64px; height: 64px; border-radius: 50%; background: var(--kab-soft); color: var(--kab-dark); display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; margin-bottom: 8px; border: 2px dashed var(--kab); }
 .assist small { color: var(--muted); }
+.bubble-img { width: calc(100% + 40px); margin: -18px -20px 12px; height: 140px; object-fit: cover; border-radius: 16px 16px 0 0; max-width: none; }
+@media (max-width: 700px) { .scene .bubble .bubble-img { border-radius: 0; margin: -14px -16px 10px; width: calc(100% + 32px); height: 160px; } }
