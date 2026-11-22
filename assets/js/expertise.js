@@ -25,18 +25,32 @@
       approach: "Récupération des amplitudes, proprioception et renforcement de la préhension."
     },
     {
-      id: "cervical", label: "Cou", short: "CE",
-      sub: "Rachis cervical",
+      id: "cervical", label: "Rachis cervical", short: "RC",
+      sub: "Cervicales",
       points: { front: [[110, 76]], back: [[110, 74]] },
       patho: ["Cervicalgies aiguës et chroniques", "Torticolis", "Névralgie cervico-brachiale", "Coup du lapin (whiplash)", "Céphalées d'origine cervicale"],
       approach: "Thérapie manuelle, exercices de contrôle moteur et conseils posturaux adaptés au quotidien."
     },
     {
-      id: "dos", label: "Dos", short: "DO",
-      sub: "Rachis dorsal & lombaire",
-      points: { front: [[110, 205]], back: [[110, 160], [110, 215]] },
-      patho: ["Lombalgie aiguë (lumbago)", "Lombalgie chronique", "Sciatique / cruralgie", "Hernie discale", "Dorsalgies", "Scoliose", "Rééducation après chirurgie du rachis"],
-      approach: "Éducation à la douleur, mobilisation, thérapie manuelle et reconditionnement à l'effort pour rester actif."
+      id: "dorsal", label: "Rachis dorsal", short: "RD",
+      sub: "Dorsales & cage thoracique",
+      points: { back: [[110, 150]] },
+      patho: ["Dorsalgies aiguës et chroniques", "Douleurs entre les omoplates", "Raideur thoracique", "Scoliose", "Maladie de Scheuermann", "Douleurs costales"],
+      approach: "Mobilisation du rachis thoracique, thérapie manuelle, travail respiratoire et renforcement des muscles du dos."
+    },
+    {
+      id: "lombaire", label: "Rachis lombaire", short: "RL",
+      sub: "Lombaires & bas du dos",
+      points: { back: [[110, 212]] },
+      patho: ["Lombalgie aiguë (lumbago)", "Lombalgie chronique", "Sciatique / cruralgie", "Hernie discale", "Canal lombaire étroit", "Rééducation après chirurgie du rachis"],
+      approach: "Éducation à la douleur, méthode McKenzie, thérapie manuelle et reconditionnement à l'effort pour rester actif."
+    },
+    {
+      id: "abdomen", label: "Zone abdominale", short: "AB",
+      sub: "Sangle abdominale & tronc",
+      points: { front: [[110, 200]] },
+      patho: ["Diastasis des grands droits", "Rééducation abdominale post-partum", "Suites de chirurgie abdominale", "Douleurs de l'aine liées aux abdominaux", "Renforcement de la sangle abdominale et gainage"],
+      approach: "Bilan de la sangle abdominale, exercices de gainage progressifs et travail respiratoire, en lien avec le rachis lombaire."
     },
     {
       id: "hanche", label: "Hanche & bassin", short: "HA",
