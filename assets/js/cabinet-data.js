@@ -203,13 +203,15 @@
       ]
     },
     {
-      id: "soin", title: "Les soins", kicker: "Bilan & soins manuels", photo: PH + "soins.jpg",
-      intro: "6 box individuels de 10 à 17 m², et des tables de soin sur le plateau.",
+      id: "soin", title: "Les box de soin", kicker: "Bilan & soins manuels", photo: PH + "soins.jpg",
+      intro: "6 box individuels et lumineux, de 10 à 17 m².",
       hotspots: [
-        { x: 79, y: 58, title: "Bilan kiné", text: "Évaluation complète en box individuel : douleur, mobilité, force, tests fonctionnels. Il sert à fixer des objectifs et à construire votre programme." },
-        { x: 13, y: 60, img: "assets/img/cabinet/dry-needling.jpg", title: "Dry needling", text: "Technique utilisant une aiguille fine pour traiter les points gâchettes musculaires et diminuer les douleurs et tensions." },
-        { x: 32, y: 66, title: "Massage", text: "Massage thérapeutique et de récupération : détente musculaire, circulation, diminution des douleurs." },
-        { x: 56, y: 37, title: "Thérapie manuelle", text: "Mobilisations et manipulations articulaires pour restaurer la mobilité et soulager la douleur, toujours associées à l'exercice." }
+        { x: 26, y: 66, title: "Bilan kiné", text: "Évaluation complète en box individuel : douleur, mobilité, force, tests fonctionnels. Il sert à fixer des objectifs et à construire votre programme." },
+        { x: 8, y: 46, img: "assets/img/cabinet/dry-needling.jpg", title: "Dry needling", text: "Technique utilisant une aiguille fine pour traiter les points gâchettes musculaires et diminuer les douleurs et tensions." },
+        { x: 45, y: 56, title: "Massage", text: "Massage thérapeutique et de récupération sur table électrique réglable : détente musculaire, circulation, diminution des douleurs." },
+        { x: 57, y: 43, title: "Thérapie manuelle", text: "Mobilisations et manipulations articulaires pour restaurer la mobilité et soulager la douleur, toujours associées à l'exercice." },
+        { eq: "gameready", x: 70, y: 33, title: "Game Ready", text: "Cryothérapie et compression directement en box, juste après la séance. Location possible en post-opératoire." },
+        { eq: "normatec", x: 86, y: 40, title: "Normatec", text: "Bottes de pressothérapie pour la récupération et les jambes lourdes." }
       ]
     },
     {
